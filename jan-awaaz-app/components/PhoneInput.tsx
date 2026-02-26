@@ -249,6 +249,20 @@ export default function PhoneInput({ onSubmit, language }: PhoneInputProps) {
       <div className="mt-4 text-center text-xs text-gray-500">
         <p>{getTranslation('privacyNote', language)}</p>
       </div>
+
+      {/* Browser Recommendation */}
+      <div className="mt-4 p-3 bg-blue-50 border border-blue-200 rounded-lg">
+        <p className="text-sm text-blue-800 text-center">
+          {getTranslation('browserRecommendation', language)}
+        </p>
+      </div>
+
+      {/* Patience Message */}
+      <div className="mt-3 p-3 bg-yellow-50 border border-yellow-200 rounded-lg">
+        <p className="text-sm text-yellow-800 text-center">
+          {getTranslation('patienceMessage', language)}
+        </p>
+      </div>
     </div>
   );
 }

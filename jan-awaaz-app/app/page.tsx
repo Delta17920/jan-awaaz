@@ -17,7 +17,7 @@ export default function Home() {
   const [language, setLanguage] = useState<Language>('hi-IN');
   const [phoneNumber, setPhoneNumber] = useState<string | null>(null);
   const [sessionId, setSessionId] = useState<string | null>(null);
-  const [currentStep, setCurrentStep] = useState<'phone' | 'language' | 'voice' | 'document' | 'card'>('phone');
+  const [currentStep, setCurrentStep] = useState<'phone' | 'language' | 'voice' | 'document' | 'card'>('language');
   const [schemeMatches, setSchemeMatches] = useState<any[]>([]);
   const [cscCenter, setCscCenter] = useState<any>(null);
   const [office, setOffice] = useState<any>(null);
@@ -33,14 +33,19 @@ export default function Home() {
     // Check for existing phone number and session
     const savedPhone = localStorage.getItem('jan-awaaz-phone');
     const savedSession = localStorage.getItem('jan-awaaz-session');
+    const savedLanguage = localStorage.getItem('jan-awaaz-language');
+    
+    if (savedLanguage) {
+      setLanguage(savedLanguage as Language);
+    }
     
     if (savedPhone && savedSession) {
       const session = JSON.parse(savedSession);
       setPhoneNumber(savedPhone);
       setSessionId(session.sessionId);
       setLanguage(session.language || 'hi-IN');
-      // Skip to language selection if we have phone number
-      setCurrentStep('language');
+      // Skip to voice if we have both phone and language
+      setCurrentStep('voice');
     }
 
     // Monitor online status
@@ -56,35 +61,35 @@ export default function Home() {
     };
   }, []);
 
-  const handlePhoneSubmit = (phone: string) => {
-    setPhoneNumber(phone);
-    localStorage.setItem('jan-awaaz-phone', phone);
-    setCurrentStep('language');
-  };
-
   const handleLanguageSelect = async (lang: Language) => {
     setLanguage(lang);
     
     // Save language preference
     localStorage.setItem('jan-awaaz-language', lang);
     
+    // Move to phone number input
+    setCurrentStep('phone');
+  };
+
+  const handlePhoneSubmit = async (phone: string) => {
+    setPhoneNumber(phone);
+    localStorage.setItem('jan-awaaz-phone', phone);
+    
     // Save session info
     const sessionData = {
       sessionId: sessionId || `temp-${Date.now()}`,
-      language: lang,
+      language: language,
     };
     localStorage.setItem('jan-awaaz-session', JSON.stringify(sessionData));
     
     // Save to IndexedDB for offline access
-    if (phoneNumber) {
-      await offlineStorage.saveSession({
-        sessionId: sessionData.sessionId,
-        phoneNumber: phoneNumber,
-        language: lang,
-        timestamp: Date.now(),
-        data: {},
-      });
-    }
+    await offlineStorage.saveSession({
+      sessionId: sessionData.sessionId,
+      phoneNumber: phone,
+      language: language,
+      timestamp: Date.now(),
+      data: {},
+    });
     
     setCurrentStep('voice');
   };
@@ -206,19 +211,19 @@ export default function Home() {
           </div>
         </header>
 
-        {/* Phone Number Input */}
-        {currentStep === 'phone' && (
-          <PhoneInput 
-            onSubmit={handlePhoneSubmit}
-            language={language}
-          />
-        )}
-
         {/* Language Selection */}
         {currentStep === 'language' && (
           <LanguageSelector 
             onSelect={handleLanguageSelect}
             onPreview={setLanguage}
+          />
+        )}
+
+        {/* Phone Number Input */}
+        {currentStep === 'phone' && (
+          <PhoneInput 
+            onSubmit={handlePhoneSubmit}
+            language={language}
           />
         )}
 
