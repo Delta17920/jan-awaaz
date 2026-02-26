@@ -212,15 +212,22 @@ export default function ReferralCardDisplay({ card, office, language }: Referral
   const downloadCard = async () => {
     if (card.imageUrl) {
       try {
-        // Fetch the image from S3
-        const response = await fetch(card.imageUrl);
+        // Use proxy API to bypass CORS
+        const proxyUrl = `/api/download-card?url=${encodeURIComponent(card.imageUrl)}`;
+        
+        // Fetch through proxy
+        const response = await fetch(proxyUrl);
+        if (!response.ok) {
+          throw new Error('Download failed');
+        }
+        
         const blob = await response.blob();
         
         // Create a download link
         const url = window.URL.createObjectURL(blob);
         const link = document.createElement('a');
         link.href = url;
-        link.download = `referral-card-${card.referenceNumber}.png`;
+        link.download = `referral-card-${card.referenceNumber}.svg`;
         document.body.appendChild(link);
         link.click();
         
