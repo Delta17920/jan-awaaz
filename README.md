@@ -239,10 +239,4 @@ This project uses a cost-optimized AWS configuration:
 
 **Key Savings**: Using Pinecone free tier instead of OpenSearch Serverless saves ~$700/month while maintaining professional RAG architecture.
 
-## License
 
-MIT
-
-## Contributors
-
-[Your Name]
