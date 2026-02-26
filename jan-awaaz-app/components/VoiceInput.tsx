@@ -58,7 +58,7 @@ export default function VoiceInput({ language, phoneNumber, onComplete }: VoiceI
       
       recognition.lang = speechLangMap[language] || 'en-IN';
       recognition.continuous = true; // Keep listening
-      recognition.interimResults = true; // Show interim results
+      recognition.interimResults = false; // Disable interim results to prevent repetition
       recognition.maxAlternatives = 1;
 
       console.log('Starting speech recognition with language:', recognition.lang);
@@ -71,28 +71,20 @@ export default function VoiceInput({ language, phoneNumber, onComplete }: VoiceI
       };
 
       recognition.onresult = (event: any) => {
-        let interimTranscript = '';
-        let newFinalTranscript = '';
+        // Only process final results to avoid repetition
+        let newText = '';
         
-        // Process all results
         for (let i = 0; i < event.results.length; i++) {
-          const transcript = event.results[i][0].transcript;
-          
           if (event.results[i].isFinal) {
-            newFinalTranscript += transcript + ' ';
-          } else {
-            interimTranscript += transcript;
+            newText += event.results[i][0].transcript + ' ';
           }
         }
         
-        // Update finalTranscript only with new final results
-        finalTranscript = newFinalTranscript;
-        
-        console.log('Current transcript:', finalTranscript + interimTranscript);
-        
-        // Show only the current speaking phrase (interim), not the accumulated text
-        // This prevents the repetition issue on mobile
-        setTranscription(interimTranscript || finalTranscript.trim());
+        if (newText) {
+          finalTranscript = newText.trim();
+          console.log('Final transcript:', finalTranscript);
+          setTranscription(finalTranscript);
+        }
       };
 
       recognition.onerror = (event: any) => {
