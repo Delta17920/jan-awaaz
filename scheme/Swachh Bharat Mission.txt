@@ -1,0 +1,37 @@
+SCHEME NAME: Swachh Bharat Mission – Grameen (Phase I)
+
+DESCRIPTION:
+A flagship sanitation scheme implemented by the Department of Drinking Water and Sanitation, Ministry of Jal Shakti. It aims to eliminate open defecation in rural India through behavioral change and the construction of household and community toilets. The scheme also focuses on Solid and Liquid Waste Management (SLWM) to establish an Open Defecation Free (ODF) India.
+
+ELIGIBILITY CRITERIA:
+- Must be from a rural household that lacked a toilet prior to the scheme.
+- Must belong to poor, underprivileged, or marginalized sections of society.
+- Preference is given to households led by women, the elderly, disabled individuals, or those from socio-economically weaker sections.
+- EXCLUSIONS: Households that already possess functional toilets are NOT eligible for financial assistance.
+
+REQUIRED DOCUMENTS:
+- Aadhaar Card
+- Bank Passbook
+- Photograph of the Constructed Toilet (required for verification and geo-tagging)
+- Any other supporting documents as requested during application
+
+BENEFITS:
+- Financial Assistance: Provides ₹12,000 per toilet to rural households to subsidize construction costs.
+- Infrastructure: Funds the construction of Individual Household Latrines (IHHL) and Community Sanitary Complexes (CSCs).
+- Community Development: Includes Information, Education and Communication (IEC) and Human Resource Development (HRD) activities to promote hygiene.
+
+APPLICATION PROCESS:
+1. Visit the official UMANG Portal website or download the UMANG mobile app.
+2. Register by entering your mobile number, verifying via OTP, and creating an MPIN.
+3. Log in and navigate to the "All Services" tab at the bottom of the page.
+4. Search for the relevant Sanitation/Jal Shakti department and select the Swachh Bharat Mission household toilet application service.
+5. Fill in all mandatory fields in the Online Application Form.
+6. Upload the required documents (Aadhaar, Bank Passbook) in the specified format.
+7. Review the information, agree to the declarations, and click "Submit." You will receive a confirmation message upon successful submission.
+
+ESTIMATED PROCESSING TIME: Verification and geo-tagging are conducted after application submission before funds are released. 
+
+APPLICATION FEES: Free to apply.
+
+CONTACT INFORMATION:
+Apply online via the UMANG App/Portal or contact your local Gram Panchayat / rural sanitation officer.

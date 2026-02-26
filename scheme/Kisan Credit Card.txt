@@ -1,0 +1,39 @@
+SCHEME NAME: Kisan Credit Card (KCC)
+
+DESCRIPTION:
+The KCC Scheme provides adequate and timely credit support from the banking system under a single window to farmers for their cultivation and other needs. This includes short-term credit for crop cultivation, post-harvest expenses, produce marketing, consumption requirements, working capital for farm maintenance, and term loans for agriculture and allied activities. It is delivered via ATM-enabled RuPay cards, smart cards, or Aadhaar-enabled biometric cards.
+
+ELIGIBILITY CRITERIA:
+- Individual or joint borrowers who are owner cultivators.
+- Tenant farmers, oral lessees, and sharecroppers.
+- Self Help Groups (SHGs) or Joint Liability Groups (JLGs) of farmers, including tenant farmers and sharecroppers.
+
+REQUIRED DOCUMENTS:
+- Duly filled Application Form
+- Two Passport Size Photographs
+- ID Proof (Aadhaar Card, Driving License, Voter ID, or Passport)
+- Address Proof (Aadhaar Card or Driving License)
+- Proof of Landholding (duly certified by revenue authorities)
+- Cropping pattern (Crops grown) with acreage details
+- Security/Collateral documents (required ONLY for loan limits above Rs. 1.60 lakhs or Rs. 3.00 lakhs, depending on bank policy)
+
+BENEFITS:
+- Subsidized Interest Rates: The government provides a 2% interest subvention and a 3% Prompt Repayment Incentive, making the effective credit rate highly subsidized at 4% per annum.
+- Flexible Credit Limits: Fixed for 5 years. The first year is based on the scale of finance, cultivated area, plus 10% for post-harvest/consumption and 20% for maintenance/insurance.
+- Limit Escalation: The credit limit automatically increases by 10% every successive year (years 2 through 5) to account for cost escalation.
+- Term Loans: Available for long-term investments like land development, minor irrigation, and purchasing farm equipment.
+
+APPLICATION PROCESS:
+1. Visit the official website of your preferred participating bank or visit the bank branch offline.
+2. Select the 'Kisan Credit Card' scheme option and click 'Apply'.
+3. Fill in the required details in the application form.
+4. Upload or submit copies of your KYC, landholding proof, and cropping details.
+5. Click 'Submit' to receive an application reference number.
+6. The bank will review your eligibility and contact you for further processing.
+
+ESTIMATED PROCESSING TIME: The bank typically responds within 3-4 working days after application submission.
+
+APPLICATION FEES: Standard banking processing fees may apply depending on the bank.
+
+CONTACT INFORMATION:
+Available through all participating Public Sector Banks, Private Banks, Cooperative Banks, and Regional Rural Banks (RRBs).

@@ -1,0 +1,45 @@
+SCHEME NAME: Pradhan Mantri Awaas Yojana - Gramin (PMAY-G)
+
+DESCRIPTION:
+The flagship rural housing mission by the Ministry of Rural Development (MoRD) aimed at providing a pucca house with basic amenities to all houseless households and those living in kutcha and dilapidated houses. The scheme was recently extended by the Union Cabinet for another 5 years (FY 2024–25 to 2028–29) to construct additional rural houses. 
+*Up-to-Date Statistics (As of August 2025):* The cumulative target now stands at 4.95 crore houses. A total of 3.85 crore houses have been sanctioned, and over 2.82 crore houses have been completed. 
+
+ELIGIBILITY CRITERIA:
+- Must be a houseless household or living in a zero, one, or two-room house with kutcha walls and kutcha roofs (identified via SECC data and verified by the Gram Sabha).
+- Automatic/Compulsory Inclusion: Households without shelter, destitutes/living on alms, manual scavengers, Primitive Tribal Groups (PTGs), and legally released bonded laborers.
+- Prioritization Score: Preference is given based on socio-economic deprivation (e.g., no adult member 16-59, female-headed household with no adult male, no literate adult above 25, disabled member with no able-bodied adult, landless casual labor).
+- Target Demographics: 60% of the target allocated to each State/UT is earmarked for Scheduled Castes (SC) and Scheduled Tribes (ST). 15% of the total fund at the National Level is earmarked for Minorities. 3% of beneficiaries at the State Level are prioritized for Persons with Disabilities (PwDs).
+- EXCLUSIONS: You are NOT eligible if you live in a pucca house, have >2 rooms, own a motorized 2/3/4-wheeler or fishing boat, own mechanized agricultural equipment, have a Kisan Credit Card limit ≥ ₹50,000, are a government employee, earn > ₹10,000/month, pay income/professional tax, own a refrigerator or landline, or own 2.5+ acres of irrigated land.
+
+REQUIRED DOCUMENTS:
+- Aadhaar Card (self-attested copy). If illiterate, a consent letter with a thumbprint is required.
+- MGNREGA Job Card (duly registered)
+- Bank Account Details (Original and duplicate)
+- Swachh Bharat Mission (SBM) Number
+- Affidavit stating the beneficiary or family members do not own a pucca house.
+
+BENEFITS:
+- Financial Assistance: ₹1,20,000 per unit in plain areas; ₹1,30,000 per unit in hilly areas, difficult areas, and IAP districts (Himalayan states, NE states, J&K, Ladakh).
+- Housing Specifications: Minimum size of 25 sq. m, including a dedicated area for hygienic cooking.
+- Institutional Loan Option: Beneficiaries can avail a loan up to ₹70,000 at a 3% lower interest rate (maximum principal for subsidy is ₹2,00,000).
+- Convergence Benefits: 
+  - ₹12,000 for toilet construction under Swachh Bharat Mission-Gramin (SBM-G).
+  - 90/95 days of unskilled labor wage employment under MGNREGA.
+  - 1 Free LPG connection under PM Ujjwala Yojana, plus piped water and electricity connections.
+- 100% Direct Benefit Transfer (DBT) electronically to the Aadhaar-linked bank/post-office account.
+
+APPLICATION PROCESS:
+1. Visit the official PMAY-G web portal or the Awaas+ App.
+2. Enter personal details (Gender, Mobile number, Aadhaar number) and upload the Aadhaar consent form.
+3. Search for the beneficiary name using the PMAY ID or priority list.
+4. Click 'Select to Register' to auto-generate and fill in remaining details (ownership type, relation, etc.).
+5. Enter Bank account information and select 'Yes' if availing a loan.
+6. Provide convergence details (MGNREGA job card number and SBM number).
+7. Submit the application to the concerned office for final verification and sanction.
+
+ESTIMATED PROCESSING TIME: Verification is conducted by the Gram Sabha before the sanction letter is issued. Construction funds are released in 3 installments based on construction progress (Plinth, Roof, Completion).
+
+APPLICATION FEES: Free.
+
+CONTACT INFORMATION:
+Apply online via the PMAY-G portal (pmayg.nic.in), the Awaas+ mobile app, or contact your local Gram Panchayat / Block Development Office.

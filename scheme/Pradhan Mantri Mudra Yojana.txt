@@ -1,0 +1,55 @@
+SCHEME NAME: Pradhan Mantri Mudra Yojana (PMMY)
+
+DESCRIPTION:
+A flagship scheme by the Government of India facilitating collateral-free micro-credit/loans up to ₹20 lakhs to income-generating micro-enterprises. It targets the non-corporate, non-farm sector in manufacturing, trading, or service sectors, including allied agricultural activities (poultry, dairy, beekeeping, etc.). Loans are extended directly by Member Lending Institutions like Public/Private Banks, Micro Finance Institutions (MFIs), and NBFCs. 
+
+ELIGIBILITY CRITERIA:
+- Eligible entities include Individuals, Proprietary concerns, Partnership Firms, Private Ltd. Companies, Public Companies, and other legal forms.
+- Must be running or starting an income-generating micro-enterprise in the non-farm manufacturing, trading, or service sectors (or allied agriculture).
+- The applicant must NOT be a defaulter to any bank or financial institution and must have a satisfactory credit track record.
+- The borrower may be required to possess the necessary skills, experience, or educational knowledge to undertake the proposed business activity.
+- *Tarun Plus Exception*: Only entrepreneurs who have already availed and successfully repaid previous loans under the 'Tarun' category are eligible for the newly introduced 'Tarun Plus' category (₹10 lakh to ₹20 lakh).
+
+REQUIRED DOCUMENTS:
+*For Shishu Loan (Up to ₹50,000):*
+- Proof of Identity (Self-attested Voter ID, Driving License, PAN Card, Aadhaar, or Passport).
+- Proof of Residence (Recent utility bill < 2 months, Voter ID, Aadhaar, Passport, or Domicile Certificate).
+- Applicant’s recent colored Photograph (2 copies, not older than 6 months).
+- Quotation of Machinery/items to be purchased (Supplier name, machinery details, and price).
+- Proof of Identity/Address of the Business Enterprise (Relevant licenses or registration certificates, if applicable).
+
+*For Kishore, Tarun, and Tarun Plus Loans (Above ₹50,000 to ₹20 Lakhs):*
+- All basic KYC documents listed above (ID Proof, Residence Proof, 2 recent Photographs, Business Identity/Address Proof).
+- Statement of accounts from the existing banker for the last 6 months.
+- Last 2 years' balance sheets of the unit along with income/sales tax returns (Mandatory for loans of ₹2 Lakhs and above).
+- Projected balance sheets for 1 year (working capital) or the loan period (term loan) (Mandatory for loans of ₹2 Lakhs and above).
+- Sales achieved during the current financial year up to the date of submission.
+- Project Report for the proposed project containing technical & economic viability details.
+- Memorandum and Articles of Association (MoA/AoA) or Partnership Deed, if applicable.
+- Asset & Liability statement from the borrower (including Directors & Partners) in the absence of a third-party guarantee.
+
+BENEFITS:
+- Collateral-Free Loans classified into four growth-stage categories:
+  - Shishu: Loans up to ₹50,000.
+  - Kishore: Loans above ₹50,000 and up to ₹5 Lakhs.
+  - Tarun: Loans above ₹5 Lakhs and up to ₹10 Lakhs.
+  - Tarun Plus: Loans above ₹10 Lakhs and up to ₹20 Lakhs.
+- Subsidized Processing: Upfront fee/processing charges for Shishu loans are completely waived by most banks. 
+
+APPLICATION PROCESS:
+1. Visit the official PM MUDRA website and navigate to the Udyamimitra portal or Jan Samarth portal.
+2. Click on "Apply Now" for a Mudra loan.
+3. Select your entrepreneur type (New, Existing, or Self-employed professional).
+4. Register by filling in the applicant's name, email, and mobile number, and generate an OTP.
+5. After successful registration, fill in your Personal Details and Professional Details.
+6. Select a hand-holding agency if you need help preparing project proposals, otherwise click "Loan Application Center".
+7. Select the required loan category (Shishu, Kishore, Tarun, or Tarun Plus) and enter your business/industry information.
+8. Attach all required documents (KYC, Business proof, Financial statements).
+9. Submit the application to generate an Application Number for future reference and bank follow-up.
+
+ESTIMATED PROCESSING TIME: Subject to bank verification of business viability, credit history, and document completeness (typically 1 to 3 weeks).
+
+APPLICATION FEES: Application is free. (Processing fees are waived for Shishu; nominal processing charges may apply for higher categories as per individual bank guidelines).
+
+CONTACT INFORMATION:
+Apply online via Udyamimitra (udyamimitra.in) or Jan Samarth (jansamarth.in), or visit any local Public/Private Sector Bank, Regional Rural Bank, or NBFC offline.

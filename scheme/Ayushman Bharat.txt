@@ -1,0 +1,38 @@
+SCHEME NAME: Ayushman Bharat - Pradhan Mantri Jan Arogya Yojana (PM-JAY)
+
+DESCRIPTION:
+A flagship national health insurance scheme implemented by the National Health Authority (NHA) providing cashless hospitalization coverage for secondary and tertiary healthcare. It aims to comprehensively address the healthcare system from prevention to ambulatory care, targeting poor and vulnerable families across India.
+
+ELIGIBILITY CRITERIA:
+- Rural Beneficiaries: Must fall into at least one of six deprivation criteria (kucha house with 1 room, no adult member 16-59, no adult male 16-59, disabled member with no able-bodied adult, SC/ST, landless manual casual labor) OR be automatically included (destitute, manual scavenger, primitive tribal group, legally released bonded labor).
+- Urban Beneficiaries: Must belong to specific occupational categories including ragpickers, beggars, domestic workers, street vendors, construction workers, plumbers, masons, laborers, sweepers, sanitation workers, home-based artisans, tailors, transport workers, rickshaw pullers, shop assistants, electricians, mechanics, and washer-men/chowkidars.
+- EXCLUSIONS: You are NOT eligible if you own a 2/3/4-wheeler, motorized fishing boat, mechanized farming equipment, a Kisan card with > ₹50,000 limit, are a government employee, earn > ₹10,000/month, own a refrigerator/landline, own a solidly built house, or own 5+ acres of agricultural land.
+
+REQUIRED DOCUMENTS:
+- Age & Identity Proof (Aadhaar Card or PAN Card)
+- Proof of Address
+- Contact details (Mobile number, e-mail)
+- Caste Certificate
+- Income Certificate
+- Document Proof of Current Family Status (Joint or Nuclear, Ration Card, or alternative family ID)
+
+BENEFITS:
+- Financial Coverage: Cashless coverage up to ₹5,00,000 per family per year for secondary and tertiary hospitalization.
+- Comprehensive Costs: Covers consultation, medicines, diagnostics, surgery, ICU, implants, accommodation, and food.
+- Pre/Post Hospitalization: Covers 3 days of pre-hospitalization and 15 days of post-hospitalization expenses.
+- No Restrictions: Covers all pre-existing diseases from day one. No restriction on age, gender, or family size.
+- Nationwide Portability: Benefits are available across India in any empanelled hospital. Covers approximately 1,929 medical procedures.
+
+APPLICATION PROCESS:
+1. Visit an empanelled hospital or a Community Service Centre (CSC) and meet the Arogya Mitra (operator).
+2. Submit your PM letter, RSBY URN, Ration Card Number, or Mobile Number to search the Beneficiary Identification System (BIS).
+3. Provide your Aadhaar/Government ID and Ration Card for individual and family identification.
+4. The Arogya Mitra uploads scanned documents and submits records to the trust/insurance company.
+5. Upon approval by the State Health Agency (SHA) or insurance company, an Ayushman e-card is issued to the beneficiary.
+
+ESTIMATED PROCESSING TIME: Instant/Same-day verification at the CSC/Hospital resulting in the immediate issuance of the e-card upon approval.
+
+APPLICATION FEES: Free (100% Cashless scheme).
+
+CONTACT INFORMATION:
+Visit any empanelled hospital or Community Service Centre (CSC). Website: pmjay.gov.in

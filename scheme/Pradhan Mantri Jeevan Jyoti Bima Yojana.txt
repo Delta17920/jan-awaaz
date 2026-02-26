@@ -1,0 +1,36 @@
+SCHEME NAME: Pradhan Mantri Jeevan Jyoti Bima Yojana (PMJJBY)
+
+DESCRIPTION:
+A one-year term life insurance scheme offering coverage for death due to any reason. It is renewable from year to year. The scheme is offered by banks and post offices and administered through life insurance companies (like LIC). It aims to provide highly affordable life insurance to the unserved and low-income demographics without requiring any medical examination.
+
+ELIGIBILITY CRITERIA:
+- The age of the applicant must be between 18 to 50 years at the time of enrollment. (Once enrolled, coverage can continue up to age 55 subject to annual renewal).
+- The applicant must hold an individual Bank or Post Office Savings Account.
+- Must consent to the 'auto-debit' of the premium from their designated account.
+- *Condition*: Insurance cover shall not be available for death (other than due to an accident) occurring during the first 30 days from the date of initial enrollment (Lien Period). 
+
+REQUIRED DOCUMENTS:
+- Duly filled Consent-cum-Declaration Form
+- Aadhaar Card (Primary KYC)
+- Bank or Post Office Savings Account details
+- For Nominee Claims (In event of death): Death Certificate, Nominee's Aadhaar, and Nominee's Bank details/Cancelled Cheque.
+
+BENEFITS:
+- Life Cover: Offers a term life cover of ₹ 2.00 Lakh to the nominee.
+- Comprehensive: Covers death due to ANY reason (natural, illness, accident, etc.).
+- Pro-Rata Premiums: If a user enrolls mid-year, they pay a reduced pro-rata premium based on the quarter they join, rather than the full yearly amount.
+
+APPLICATION PROCESS:
+1. Visit the bank or post office where you hold a savings account, or apply via their Net Banking portal.
+2. Download or obtain the "CONSENT-CUM-DECLARATION FORM" (available on jansuraksha.gov.in or the bank branch).
+3. Duly fill and sign the application form and nominate a beneficiary.
+4. Attach a self-attested copy of your Aadhaar Card.
+5. Submit the form to the authorized official of the Bank/Post Office.
+6. The official will process the auto-debit and return the "ACKNOWLEDGEMENT SLIP CUM CERTIFICATE OF INSURANCE".
+
+ESTIMATED PROCESSING TIME: Instant enrollment upon document submission. Risk cover starts exactly from the date the premium is auto-debited from the account.
+
+APPLICATION FEES: Premium is ₹ 436/- per annum per subscriber, auto-debited annually between May 25th and May 31st.
+
+CONTACT INFORMATION:
+Apply directly at your local participating Bank branch or Post Office. Website: jansuraksha.gov.in

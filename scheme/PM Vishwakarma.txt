@@ -1,0 +1,43 @@
+SCHEME NAME: PM Vishwakarma
+
+DESCRIPTION:
+A Central Sector Scheme launched by the Ministry of Micro, Small and Medium Enterprises (MoMSME) to provide end-to-end support to artisans and craftspeople. It offers collateral-free credit, skill training, modern tools, digital transaction incentives, and market linkage. 
+*Covered Trades:* The scheme specifically covers 18 family-based traditional trades: Carpenter (Suthar), Boat Maker, Armourer, Blacksmith (Lohar), Hammer and Tool Kit Maker, Locksmith, Goldsmith (Sunar), Potter (Kumhaar), Sculptor/Stone Carver, Cobbler/Shoemaker, Mason (Rajmistri), Basket/Mat/Broom Maker, Doll & Toy Maker, Barber (Naai), Garland Maker (Malakaar), Washerman (Dhobi), Tailor (Darzi), and Fishing Net Maker.
+
+ELIGIBILITY CRITERIA:
+- Must be an artisan or craftsperson working with hands and tools in one of the 18 recognized traditional trades.
+- Must be engaged in the unorganized sector on a self-employment basis.
+- Minimum age of the applicant must be 18 years on the date of registration.
+- Must be currently engaged in the concerned trade on the date of registration.
+- Must NOT have availed loans under similar credit-based self-employment schemes (e.g., PMEGP, PM SVANidhi, Mudra) in the past 5 years. (Exception: MUDRA/SVANidhi beneficiaries who have fully repaid their loans are eligible).
+- EXCLUSIONS: Registration is restricted to only ONE member per family. Persons in government service and their family members are NOT eligible.
+
+REQUIRED DOCUMENTS:
+- Aadhaar Card (Mandatory for e-KYC and registration).
+- Mobile Number (must be linked to Aadhaar).
+- Bank Account Details.
+- Ration Card (Mandatory. If the beneficiary does not have a ration card, they must produce the Aadhaar cards of all family members).
+
+BENEFITS:
+- Recognition: Official PM Vishwakarma Certificate and Digital ID Card.
+- Skilling & Stipend: Basic Training (5-7 days / 40 hours) and Advanced Training (15 days / 120 hours). Artisans receive a training stipend of ₹500 per day.
+- Toolkit Incentive: A grant of ₹15,000 to purchase modern tools and equipment.
+- Collateral-Free Credit: Enterprise Development Loans provided in two tranches. ₹1,00,000 (First Tranche, 18-month repayment) and ₹2,00,000 (Second Tranche, 30-month repayment).
+- Subsidized Interest: Beneficiaries pay a highly concessional interest rate of just 5% (the government covers an interest subvention cap up to 8% and credit guarantee fees).
+- Digital Transactions: Incentive of ₹1 per digital transaction (maximum up to 100 transactions monthly).
+- Marketing Support: Assistance with quality certification, branding, e-commerce linkage, and trade fair participation.
+
+APPLICATION PROCESS:
+1. Visit the nearest Common Service Centre (CSC) or the official PM Vishwakarma portal.
+2. Complete Aadhaar Verification by entering the OTP sent to your registered mobile number.
+3. Complete the Biometric Verification Process at the CSC.
+4. Fill in the mandatory details in the Online Application Form and submit it to generate an Application Number.
+5. The application undergoes a 3-stage verification process: Gram Panchayat/ULB level, District Implementation Committee, and finally the Screening Committee.
+6. Upon final approval, the artisan receives their Vishwakarma ID and can begin training/availing funds.
+
+ESTIMATED PROCESSING TIME: Varies based on the 3-stage local and district verification process. Notifications regarding the disbursal of incentives are sent via SMS.
+
+APPLICATION FEES: Free registration. 
+
+CONTACT INFORMATION:
+Apply online via the PM Vishwakarma Portal (pmvishwakarma.gov.in) or visit your nearest Common Service Centre (CSC) / Village Level Entrepreneur (VLE) for assisted application.

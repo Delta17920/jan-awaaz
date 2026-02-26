@@ -1,0 +1,43 @@
+SCHEME NAME: Janani Suraksha Yojana (JSY)
+
+DESCRIPTION:
+A safe motherhood intervention scheme under the National Health Mission (NHM) launched by the Ministry of Health and Family Welfare. It aims to reduce maternal and neonatal mortality by promoting institutional delivery among poor pregnant women. It provides 100% centrally sponsored cash assistance integrated with delivery and post-delivery care, utilizing Accredited Social Health Activists (ASHA) as the primary link between the government and pregnant women.
+
+ELIGIBILITY CRITERIA:
+- Institutional Delivery (General): Must deliver in a government health center (Sub-centre, PHC, CHC, FRU, District/State Hospital) or an accredited private institution.
+- Low Performing States (LPS): ALL pregnant women delivering in government health centers are eligible (no BPL or marriage certification required). To use an accredited private institution, the woman must be BPL or SC/ST.
+- High Performing States (HPS): Must belong to a Below Poverty Line (BPL) household OR be a Scheduled Caste (SC) / Scheduled Tribe (ST) woman.
+- Home Delivery: Must belong to a BPL household (applicable in all states/UTs).
+
+REQUIRED DOCUMENTS:
+- Maternal and Child Health (MCH) Card / JSY Card
+- Below Poverty Line (BPL) Certificate (Required in HPS, for home deliveries, or private institutions)
+- SC/ST Certificate (If applicable for eligibility in HPS or private institutions)
+- Referral Slip from ASHA/ANM/Medical Officer
+- Admission Slip for Delivery (for encashment at hospital cash counter)
+
+BENEFITS:
+- Institutional Delivery Cash Assistance (Mother's Package): 
+  - Low Performing States (LPS): ₹1,400 (Rural), ₹1,000 (Urban).
+  - High Performing States (HPS): ₹700 (Rural), ₹600 (Urban).
+  - North-Eastern/Tribal Areas: ₹700.
+- Home Delivery Cash Assistance: ₹500 per delivery for BPL women.
+- Complications/C-Section: Up to ₹1,500 per case provided to the health institution to hire specialists if unavailable in the government setup.
+- Comprehensive Care (JSSK Integration): Free and cashless delivery, free drugs, diagnostics, blood, diet, and transport (including drop-back home).
+- ASHA Assistance: ASHA workers provide escort services and receive cash incentives for facilitating ANC, transport, and institutional delivery.
+
+APPLICATION PROCESS:
+1. Registration: Identify and register with an ASHA, ANM, or Anganwadi Worker 20 to 24 weeks before the expected delivery date.
+2. MCH Card: The health worker will issue a Maternal and Child Health (MCH) Card and a JSY Card in duplicate.
+3. Antenatal Care: Complete at least three Antenatal Care (ANC) check-ups and receive Tetanus Toxoid (TT) injections.
+4. Document Submission: Submit the JSY card and any required BPL/Caste certificates to the Medical Officer for verification.
+5. Delivery: Proceed to the predetermined health institution for delivery, ideally accompanied by the ASHA worker.
+6. Cash Disbursement: The mother's cash entitlement is disbursed in one installment at the institution (payments made before or after a strict 7-day window of delivery are considered illegitimate).
+7. Postnatal Care: ASHA conducts a postnatal visit within 7 days to track health and facilitate newborn immunization (BCG).
+
+ESTIMATED PROCESSING TIME: Cash benefits are disbursed immediately at the health institution, strictly within 7 days of delivery. 
+
+APPLICATION FEES: Free.
+
+CONTACT INFORMATION:
+Contact your local ASHA worker, Auxiliary Nurse Midwife (ANM), Anganwadi Worker, or visit the nearest Primary Health Centre (PHC) / Community Health Centre (CHC).

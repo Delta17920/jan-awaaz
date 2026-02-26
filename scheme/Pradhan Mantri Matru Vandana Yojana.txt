@@ -1,0 +1,48 @@
+SCHEME NAME: Pradhan Mantri Matru Vandana Yojana (PMMVY)
+
+DESCRIPTION:
+A Centrally Sponsored flagship maternity benefit program by the Ministry of Women and Child Development. It provides cash incentives to pregnant women and lactating mothers from socially and economically disadvantaged sections to partially compensate for wage loss. Under PMMVY 2.0 (Mission Shakti), the scheme also promotes positive behavioral change by providing an additional cash incentive for a second child, provided the second child is a girl.
+
+ELIGIBILITY CRITERIA:
+- The applicant must be a pregnant woman of at least 19 years of age.
+- The applicant must be experiencing wage-loss due to the pregnancy.
+- Must belong to a socially and economically disadvantaged section. The applicant must meet AT LEAST ONE of these criteria: SC/ST, partially (40%) or fully disabled (Divyang Jan), BPL Ration Card holder, PMJAY/Ayushman Bharat beneficiary, e-Shram card holder, PM Kisan Samman Nidhi woman farmer, MGNREGA Job Card holder, net family income < ₹8 Lakh per annum, Pregnant/Lactating AWW/AWH/ASHA worker, or NFSA Ration Card holder.
+- Scheme applies to the first live birth. It also applies to the second live birth ONLY if the second child is a girl. (If a beneficiary delivers twins/triplets in her second pregnancy and one is a girl, she receives the second child incentive).
+- Must apply within 270 days from childbirth.
+- EXCLUSIONS: Women in regular employment with the Central/State Government or PSUs, or receiving similar maternity benefits under other laws, are NOT eligible. 
+- NOTE: The husband's Aadhaar is NOT mandatory to avail of these benefits.
+
+REQUIRED DOCUMENTS:
+- Aadhaar Card
+- Proof of Eligibility (e.g., BPL Card, e-Shram Card, Income Certificate < ₹8 Lakh, SC/ST Certificate, etc.)
+- Aadhaar-mapped Bank/Post Office Account details
+- Mother and Child Protection (MCP) / RCHI Card
+- Date of Last Menstrual Period (LMP) and Antenatal Check-up (ANC) date records
+- Child Birth Certificate (for relevant installments)
+- Child Immunization details (for relevant installments)
+- Registered Mobile Number
+
+BENEFITS:
+- First Child (₹5,000 Total in 2 Installments):
+  - 1st Installment (₹3,000): On registration of pregnancy and at least one Antenatal Check-up (ANC) within 6 months of LMP.
+  - 2nd Installment (₹2,000): When childbirth is registered and the child has received all due vaccines till the age of 14 weeks.
+  - *Convergence Note*: Beneficiaries also receive Janani Suraksha Yojana (JSY) incentives after institutional delivery, bringing the average total to ₹6,000.
+- Second Child - Girl Child Only (₹6,000 Total in 1 Installment):
+  - Single Installment (₹6,000): Provided post-birth after pregnancy registration, one ANC, birth registration of the girl child, and completion of vaccines up to 14 weeks.
+- Miscarriage/Stillbirth: The beneficiary is treated as a fresh beneficiary in the event of any future pregnancy.
+
+APPLICATION PROCESS:
+1. Online via Citizen Portal: Visit the official PMMVY website and click on the 'Citizen Login' tab.
+2. Verify your mobile number and enter details (Name, State, District, Village) to create an account.
+3. Log in with your new User ID and Password.
+4. Go to the "Data Entry" tab and select "Beneficiary Registration".
+5. Fill in personal details and select whether you are applying for the First Child or Second Child.
+6. Upload the required eligibility proofs and submit the form.
+7. Mobile App: Citizens can also register directly using the official PMMVY Mobile App.
+
+ESTIMATED PROCESSING TIME: Installments are credited directly to the Aadhaar-seeded bank account (DBT) as the specific pregnancy/immunization milestones are met and verified by local health workers.
+
+APPLICATION FEES: Free.
+
+CONTACT INFORMATION:
+Apply online via the PMMVY Portal/App, or seek offline assistance from your local Anganwadi Centre (AWC) or ASHA worker.

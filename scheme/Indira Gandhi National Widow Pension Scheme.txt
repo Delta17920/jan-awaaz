@@ -1,0 +1,38 @@
+SCHEME NAME: Indira Gandhi National Widow Pension Scheme (IGNWPS)
+
+DESCRIPTION:
+A non-contributory pension scheme implemented by the Ministry of Rural Development under the National Social Assistance Programme (NSAP). It is designed to provide direct social security and financial assistance to widows from Below Poverty Line (BPL) households.
+
+ELIGIBILITY CRITERIA:
+- The applicant must be a widow.
+- The applicant must be in the age group of 40 to 79 years (Note: Widows aged 80 years and above continue to receive benefits at an enhanced rate).
+- The applicant must belong to a household living Below the Poverty Line (BPL) according to the criteria prescribed by the Government of India.
+- EXCLUSIONS: The pension will be immediately discontinued in the event of the widow's remarriage, or if the household's economic status improves and they move above the poverty line.
+
+REQUIRED DOCUMENTS:
+- Death Certificate of Husband (Must explicitly mention the name of the surviving wife/widow).
+- BPL Ration Card.
+- Age Proof (Birth certificate or school certificate. In their absence, a Ration Card or Voter ID/EPIC may be considered. If no valid document exists, an age certificate issued by a Medical Officer of any government hospital is accepted).
+- Bank Account or Post Office Account details (for Direct Benefit Transfer).
+- Passport-size photograph.
+
+BENEFITS:
+- Financial Assistance: A direct monthly pension is provided to the beneficiary.
+- Widows aged between 40 years and 79 years receive ₹300/- per month.
+- Widows aged 80 years and above receive an enhanced pension of ₹500/- per month.
+
+APPLICATION PROCESS:
+1. Online via UMANG: Download the UMANG mobile app or visit the web portal (web.umang.gov.in).
+2. Register and log in using your mobile number and OTP.
+3. Search for "NSAP" (National Social Assistance Programme) in the services bar.
+4. Click on "Apply Online".
+5. Fill in the basic details, choose the mode of payment for the pension (Bank or Post Office), and upload the required documents and photograph.
+6. Click "Submit" to generate an application reference number.
+7. Offline Application: Citizens can also apply offline by submitting the required documents to their local Gram Panchayat, Municipality, or Block Development Office (BDO).
+
+ESTIMATED PROCESSING TIME: Verification of BPL status and death certificates is done at the local level (Gram Panchayat/Municipality). Once approved, funds are transferred monthly.
+
+APPLICATION FEES: Free to apply.
+
+CONTACT INFORMATION:
+Apply online via the UMANG App, or contact your local Gram Panchayat, Block Development Officer (BDO), or District Social Welfare Office.

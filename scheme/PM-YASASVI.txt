@@ -1,0 +1,45 @@
+SCHEME NAME: PM-YASASVI: Post-Matric Scholarship for OBC, EBC and DNT Students
+
+DESCRIPTION:
+A Centrally Sponsored Scheme by the Ministry of Social Justice & Empowerment to provide educational financial assistance to Other Backward Classes (OBC), Economically Backward Classes (EBC), and Denotified, Nomadic Tribes (DNT) students. It enables students to pursue post-matriculation or post-secondary stages of education in recognized institutions within India. 
+
+ELIGIBILITY CRITERIA:
+- Must be an Indian national belonging to OBC, EBC, or DNT categories, permanently settled in their respective State/UT.
+- Must have passed the Matriculation (Class X) or higher secondary examination from a recognized Board/University.
+- Family income from all sources must NOT exceed ₹2.50 lakhs per annum.
+- Only two boys from the same parents/guardians are entitled to receive the scholarship (this restriction does not apply to girls).
+- The student must maintain satisfactory progress, good conduct, and a minimum of 75% attendance (verified via an Aadhaar-based attendance system) for annual renewal.
+- EXCLUSIONS: Students pursuing the same stage of education in a different subject (e.g., studying another B.A. after already completing a B.A.), students who completed a professional line and joined another (e.g., LLB after B.Ed), and students holding any other scholarship/stipend are NOT eligible.
+
+REQUIRED DOCUMENTS:
+- Aadhaar Card
+- Valid Income Certificate issued by the competent authority (taken only once at the time of admission for multi-year courses)
+- Caste/Community Certificate (OBC/EBC/DNT)
+- Domicile Certificate
+- Educational qualification marksheets and certificates
+- Bank Account details (must be Aadhaar-seeded for DBT)
+- Passport-size photograph
+- Disability certificate (if applicable)
+
+BENEFITS:
+Provides a combined Yearly Academic Allowance and Yearly Tuition Fee based on the course category, paid directly via Aadhaar Based Payment System (DBT).
+- Group 1 (Degree & PG Professional: Engineering, Medicine, CA, PhD, etc.): ₹20,000/year (₹10k Academic + ₹10k Tuition).
+- Group 2 (Other Professional Degree/Diploma: Pharmacy, Nursing, Hotel Mgmt, ITI/Polytechnic post-Class XII): ₹13,000/year (₹8k Academic + ₹5k Tuition).
+- Group 3 (Standard Graduate & PG courses: BA, BSc, BCom, MA, etc.): ₹8,000/year (₹6k Academic + ₹2k Tuition).
+- Group 4 (Post-Class X non-degree: Class XI/XII general/vocational, ITI post-Class X): ₹5,000/year (₹5k Academic + ₹0 Tuition).
+- Freeship Card: An automatically generated digital card issued by the State/UT that entitles the student to take admission in an institution without the pre-payment of tuition and hostel fees. 
+
+APPLICATION PROCESS:
+1. Visit the National Scholarship Portal (scholarships.gov.in) or the specific State/UT scholarship IT portal.
+2. For the Freeship Card: Register on the portal well before admission, providing your Aadhaar and intended course details. The card is issued within 30 days of registration.
+3. For the Scholarship (New Applicant): Click 'New Registration' under the Applicant Corner, accept the guidelines, and provide the required details.
+4. For the Scholarship (Registered Applicant): Click 'Fresh Application', log in with your application ID and password.
+5. Select the PM-YASASVI scholarship, fill out the form, upload the required scanned documents, and submit.
+6. The application goes through institutional verification followed by State Govt verification.
+
+ESTIMATED PROCESSING TIME: Strict annual timelines apply. Portals typically open April 1st and close June 30th. Institutional verification finishes by July 31st, State verification by August 15th, and final DBT payments are released before September 30th.
+
+APPLICATION FEES: Free to apply.
+
+CONTACT INFORMATION:
+Apply online via the National Scholarship Portal (scholarships.gov.in) or your respective State/UT scholarship portal.

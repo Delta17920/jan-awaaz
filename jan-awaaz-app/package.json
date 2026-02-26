@@ -1,0 +1,44 @@
+{
+  "name": "jan-awaaz-app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint"
+  },
+  "dependencies": {
+    "@aws-sdk/client-bedrock-agent-runtime": "^3.996.0",
+    "@aws-sdk/client-bedrock-runtime": "^3.996.0",
+    "@aws-sdk/client-dynamodb": "^3.996.0",
+    "@aws-sdk/client-location": "^3.996.0",
+    "@aws-sdk/client-polly": "^3.996.0",
+    "@aws-sdk/client-s3": "^3.996.0",
+    "@aws-sdk/client-secrets-manager": "^3.996.0",
+    "@aws-sdk/client-textract": "^3.996.0",
+    "@aws-sdk/client-transcribe": "^3.996.0",
+    "@aws-sdk/lib-dynamodb": "^3.996.0",
+    "@aws-sdk/s3-request-presigner": "^3.996.0",
+    "@ducanh2912/next-pwa": "^10.2.9",
+    "@types/qrcode": "^1.5.6",
+    "@types/uuid": "^10.0.0",
+    "fast-check": "^4.5.3",
+    "next": "16.1.6",
+    "next-pwa": "^5.6.0",
+    "qrcode": "^1.5.4",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "uuid": "^13.0.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.1.6",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}

@@ -1,0 +1,40 @@
+SCHEME NAME: Pradhan Mantri Jan Dhan Yojana (PMJDY)
+
+DESCRIPTION:
+A National Mission for Financial Inclusion (NMFI) providing universal banking services to ensure every unbanked adult has access to financial activities. It secures the unsecured and funds the unfunded by providing basic savings bank accounts, need-based credit, remittances, insurance, and pension facilities to weaker sections and low-income groups.
+
+ELIGIBILITY CRITERIA:
+- The applicant must be an Indian National.
+- The scheme targets "every unbanked adult".
+- Minors above 10 years of age can apply, but they require support from their legal guardians to administer the PMJDY account.
+
+REQUIRED DOCUMENTS:
+- AADHAAR Card
+- Government ID Proof (Voter Card, PAN Card, or Ration Card)
+- Permanent Address Proof (Passport, Driving License, Electricity Bill, Telephone Bill, or Water Bill)
+- Passport size photograph
+- Mobile number or Email ID
+- Duly filled and signed PMJDY Account Opening Form
+- *CHOTA KHATA EXCEPTION*: If an applicant does not have any Officially Valid Documents, they can still open a "Small Account" (Chota Khata) which is valid for 12 months. They must apply for a valid document within that year to extend it.
+
+BENEFITS:
+- Basic Savings Bank Deposit Account (BSBDA): Zero balance account. No minimum balance maintenance required. (Note: Cash withdrawals are limited to four times a month).
+- RuPay Debit Card: A free RuPay debit card is issued to all beneficiaries.
+- Accident Insurance: Inbuilt accident insurance cover of ₹2 lakhs on the RuPay card (for accounts opened after 28.08.2018; ₹1 lakh for older accounts).
+- Overdraft (OD) Facility: Beneficiaries can avail of an overdraft facility up to ₹10,000.
+- Bank Mitras (Business Correspondents): Access to banking solutions (deposits, withdrawals, mini statements) in remote rural areas through retail agents, without needing to visit a physical bank branch.
+
+APPLICATION PROCESS:
+1. Visit the official PMJDY portal (pmjdy.gov.in).
+2. Go to the "e-documents" section and click the link for the "Account Opening Form" (available in English and Hindi).
+3. Download and print the form in PDF format.
+4. Fill the form manually with personal data, bank branch, Aadhaar number, profession, annual income, and Kisan Credit Card details (if any).
+5. Attach the required documents and photographs.
+6. Visit your nearest bank branch or Bank Mitra (Business Correspondent) and submit the application.
+
+ESTIMATED PROCESSING TIME: Accounts are typically opened immediately or within a few working days upon document verification at the bank branch.
+
+APPLICATION FEES: Free (Zero balance account).
+
+CONTACT INFORMATION:
+Apply at any physical Bank Branch or through a local Bank Mitra / Business Correspondent in your rural area. Website: pmjdy.gov.in

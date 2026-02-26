@@ -1,0 +1,40 @@
+SCHEME NAME: Pradhan Mantri Fasal Bima Yojana (PMFBY)
+
+DESCRIPTION:
+A crop insurance scheme by the Ministry of Agriculture that provides financial protection to farmers against crop loss due to natural disasters (hail, drought, famine), pests, and diseases. It covers over 50 crore farmers and over 50 different crops to stabilize farmer income and ensure continuance in farming.
+
+ELIGIBILITY CRITERIA:
+- Must be a farmer, including tenant farmers and sharecroppers, growing notified crops in notified areas.
+- Must have an insurable interest in the insured crops and be the cultivator/sharecropper on the land.
+- Must possess a valid land ownership certificate or a valid land tenure agreement.
+- Must apply for insurance coverage usually within 2 weeks of the start of the sowing season.
+- Must not have received compensation for the same crop loss from any other source.
+- EXCLUSIONS: Losses in non-notified areas, losses outside the crop cycle, losses due to farmer negligence, and farmers who fail to pay their premium are NOT covered.
+
+REQUIRED DOCUMENTS:
+- Passport-sized Photograph
+- Identity Proof (Aadhaar Card, PAN Card, Voter ID, Bank Passbook with Photo, Kisan Photo Book, or NREGA Job Card)
+- Address Proof (Aadhaar Card, PAN Card, Voter ID, Electricity Bill, or Bank Passbook with Photo)
+- Bank Passbook
+- Evidence of Land records (State Records of Right (RoR), Land Possession Certificate (LPC), or other state-permitted agreements)
+- Declaration about the crop sown or intended to be sown
+
+BENEFITS:
+- Comprehensive Coverage: Covers yield losses, prevented sowing (indemnity up to 25%), post-harvest losses (up to 14 days for "cut and spread" crops), and localized calamities.
+- Affordable Premiums: Farmer pays maximum 2% for Kharif crops, 1.5% for Rabi crops, and 5% for commercial/horticultural crops. The government subsidizes the rest.
+- Free for Specific Regions: The government pays the ENTIRE premium for farmers in North-Eastern States, Jammu & Kashmir, and Himachal Pradesh.
+- Timely Compensation: Claims are processed within two months of the harvest.
+
+APPLICATION PROCESS:
+1. Visit the nearest participating bank, insurance office, or Common Service Centre (CSC), or apply online.
+2. Fill in all mandatory fields in the application form and paste a passport-sized photograph.
+3. Attach self-attested copies of all mandatory documents.
+4. Submit the form and pay the applicable premium amount.
+5. Receive an application reference number to track the status online.
+
+ESTIMATED PROCESSING TIME: Claims are processed within 2 months of harvest.
+
+APPLICATION FEES: Premium payment required (1.5% to 5% depending on crop type).
+
+CONTACT INFORMATION:
+Website: pmfby.gov.in (Track application via the 'Application Status' option)

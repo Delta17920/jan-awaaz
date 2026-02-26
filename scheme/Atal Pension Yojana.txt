@@ -1,0 +1,39 @@
+SCHEME NAME: Atal Pension Yojana (APY)
+
+DESCRIPTION:
+An old-age income security and pension scheme aimed at addressing longevity risks among workers in the unorganized sector. It encourages poor and underprivileged workers to voluntarily save for their retirement, providing a guaranteed minimum monthly pension after the age of 60.
+
+ELIGIBILITY CRITERIA:
+- The applicant must be an Indian citizen.
+- Age Limit: Minimum age of joining is 18 years, and the maximum age is 40 years.
+- The applicant must have an active Savings Bank Account or Post Office Savings Account.
+- The applicant must consent to 'auto-debit' of the contribution amount on a monthly, quarterly, or half-yearly basis until the age of 60.
+- EXCLUSIONS: From 1st October 2022, any citizen who is or has ever been an income-tax payer is NOT eligible to join APY.
+
+REQUIRED DOCUMENTS:
+- Active Bank / Post Office Savings Account details (KYC details are automatically fetched from this account).
+- Aadhaar Card (required for eSign and OTP verification if applying online).
+- Nominee details.
+
+BENEFITS:
+- Guaranteed Pension: Upon reaching 60 years of age, the subscriber receives a guaranteed minimum pension of ₹1000, ₹2000, ₹3000, ₹4000, or ₹5000 per month (depending on their contribution tier) until death.
+- Spouse Benefit: After the subscriber’s demise, the spouse is entitled to receive the exact same monthly pension amount until their death.
+- Nominee Wealth Return: After the demise of both the subscriber and the spouse, the nominee receives the entire accumulated pension wealth.
+- Death Before 60: The spouse can choose to continue contributing to the account until the original subscriber would have turned 60, OR they can choose to withdraw the entire accumulated corpus immediately.
+- Tax Benefits: Contributions are eligible for tax benefits under Section 80CCD(1).
+
+APPLICATION PROCESS:
+1. Online via Net Banking: Log in to your bank's internet banking dashboard, search for APY, fill in basic/nominee details, and give consent for auto-debit.
+2. Online via NSDL Portal: 
+   - Visit the eNPS website (enps.nsdl.com) and select "Atal Pension Yojana".
+   - Complete KYC via Aadhaar OTP, Offline XML, or Virtual ID.
+   - Choose your desired pension amount (₹1000 to ₹5000) and contribution frequency.
+   - Fill in nominee details and complete the eSign process.
+3. Offline: Visit the bank or post office branch where you hold your savings account, fill out the APY registration form, and submit it to the bank staff.
+
+ESTIMATED PROCESSING TIME: Instant registration online or within a few days if applying offline through a bank branch.
+
+APPLICATION FEES: No application fee. However, subscribers must pay their chosen premium contribution via auto-debit. (Delayed payments attract overdue interest charges as prescribed by PFRDA).
+
+CONTACT INFORMATION:
+Toll-Free Helpline: 1800-110-069. Grievances can be raised at www.npscra.nsdl.co.in. Apply at any participating bank or post office.

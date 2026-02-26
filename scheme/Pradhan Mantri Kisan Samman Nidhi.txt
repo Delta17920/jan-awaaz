@@ -1,0 +1,41 @@
+SCHEME NAME: Pradhan Mantri Kisan Samman Nidhi (PM-KISAN)
+
+DESCRIPTION:
+A Central Sector Scheme by the Department of Agriculture and Farmers Welfare to provide direct income support to all landholding farmer families across the country. It aims to supplement the financial needs of farmers to procure various inputs related to agriculture and allied activities, ensuring proper crop health and appropriate yields.
+
+ELIGIBILITY CRITERIA:
+- Open to all landholding farmer families (husband, wife, and minor children) who own cultivable land in their names as per state land records.
+- EXCLUSIONS: You are NOT eligible if you fall into any of the following categories:
+  - Institutional landholders.
+  - Farmer families holding constitutional posts (former or current).
+  - Former or current Ministers, State Ministers, MPs, MLAs, MLCs, or Mayors.
+  - All serving or retired officers and employees of Central/State Government Ministries, Offices, Departments, and PSUs (excluding Multi-Tasking Staff / Class IV/Group D employees).
+  - All superannuated/retired pensioners whose monthly pension is ₹10,000 or more.
+  - Persons who paid Income Tax in the last assessment year.
+  - Professionals like Doctors, Engineers, Lawyers, Chartered Accountants, and Architects registered with professional bodies and carrying out profession by undertaking practices.
+
+REQUIRED DOCUMENTS:
+- Aadhaar Card (Mandatory).
+- Bank Account Details (Must be Aadhaar-seeded for DBT).
+- Land Holding Papers (Record of Rights / Khatauni) showing cultivable land in the applicant's name.
+- e-KYC Completion (Mandatory for receiving installments).
+
+BENEFITS:
+- Financial Support: ₹6,000 per year per eligible farmer family.
+- Installment Structure: The amount is paid in three equal installments of ₹2,000 each every 4 months (April-July, August-November, December-March).
+- Direct Benefit Transfer: The funds are transferred directly into the Aadhaar-seeded bank accounts of the beneficiaries, completely eliminating middlemen.
+
+APPLICATION PROCESS:
+1. Online Self-Registration: Visit the PM-KISAN official portal (pmkisan.gov.in) and click on "New Farmer Registration" in the Farmers Corner.
+2. Enter your Aadhaar number, choose your state, and fill out the detailed registration form including your bank details and land record details.
+3. Upload the required land documents and submit.
+4. Complete the mandatory e-KYC via OTP on the portal or via biometric authentication at a CSC.
+5. Offline Registration: Alternatively, eligible farmers can apply through local Revenue Officers (Patwaris), Nodal Officers appointed by the State Government, or nearby Common Service Centres (CSCs) upon payment of nominal fees.
+6. The State/UT Government verifies the details and uploads the verified list of beneficiaries to the PM-KISAN portal.
+
+ESTIMATED PROCESSING TIME: Approvals depend on state-level land record verification. Once approved, funds are released during the scheduled national installment rollout windows.
+
+APPLICATION FEES: Online self-registration is free. CSCs may charge a nominal government-approved fee for assisted registration.
+
+CONTACT INFORMATION:
+PM-Kisan Helpline No: 155261 / 011-24300606. Apply online via pmkisan.gov.in or locally via your Patwari / CSC.
