@@ -237,7 +237,7 @@ export default function ReferralCardDisplay({ card, office, language }: Referral
     // If address contains multiple lines with labels, extract just the address line
     if (cleanAddress.includes('Address:')) {
       const lines = cleanAddress.split('\n');
-      const addressLine = lines.find(line => line.includes('Address:') || line.includes('पता:') || line.includes('முகவரி:'));
+      const addressLine = lines.find((line: string) => line.includes('Address:') || line.includes('पता:') || line.includes('முகவரி:'));
       if (addressLine) {
         // Remove the label and get just the address
         cleanAddress = addressLine.replace(/^(Address:|पता:|முகவரி:|చిరునామా:|വിലാസം:|ವಿಳಾಸ:|ঠিকানা:|સરનામું:|ਪਤਾ:|ଠିକଣା:)\s*/i, '').trim();

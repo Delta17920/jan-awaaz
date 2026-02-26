@@ -157,7 +157,7 @@ DOCUMENT CAPTURE INSTRUCTIONS:
 - This scheme requires ${docCount} document${docCount > 1 ? 's' : ''}
 - The specific documents needed are: ${docNames.length > 0 ? docNames.join(', ') : requiredDocs.join(', ')}
 - When user confirms they have documents, tell them: "कृपया अपने ${docCount} दस्तावेज़ एक-एक करके दिखाएं।"
-- List the specific documents by name: ${docNames.length > 0 ? docNames.map((name, i) => `${i + 1}. ${name}`).join(', ') : ''}
+- List the specific documents by name: ${docNames.length > 0 ? docNames.map((name: string, i: number) => `${i + 1}. ${name}`).join(', ') : ''}
 - Tell them they can SKIP documents they don't have: "अगर कोई दस्तावेज़ नहीं है तो छोड़ सकते हैं।"
 - Then include [READY_FOR_DOCUMENTS] marker
 - The system will automatically handle capturing each document

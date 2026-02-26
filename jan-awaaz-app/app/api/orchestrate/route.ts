@@ -9,7 +9,7 @@ import { transcribeVoice, synthesizeSpeech } from '@/lib/aws/voice-service';
 import { findMatchingSchemes } from '@/lib/aws/scheme-service';
 import { verifyDocument } from '@/lib/aws/document-service';
 import { generateCard } from '@/lib/aws/referral-card-service';
-import { Language, WorkflowStep, SessionStatus, AudioStream, DocumentImage, Office, OfficeType, ReferralCard } from '@/lib/types';
+import { Language, WorkflowStep, SessionStatus, AudioStream, DocumentImage, Office, OfficeType, ReferralCard, DocumentStatus, DocumentType, IconType } from '@/lib/types';
 import { logAuditEvent, AuditEventType } from '@/lib/utils/audit-logger';
 import { logError, AppError, ErrorType, ErrorSeverity } from '@/lib/utils/error-handler';
 import { voiceTemplates } from '@/lib/utils/voice-templates';
