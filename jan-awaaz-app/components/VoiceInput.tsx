@@ -13,6 +13,7 @@ interface VoiceInputProps {
 export default function VoiceInput({ language, phoneNumber, onComplete }: VoiceInputProps) {
   const [isRecording, setIsRecording] = useState(false);
   const [transcription, setTranscription] = useState('');
+  const [assistantResponse, setAssistantResponse] = useState('');
   const [isProcessing, setIsProcessing] = useState(false);
   const recognitionRef = useRef<any>(null);
   const [hasCheckedDocumentStatus, setHasCheckedDocumentStatus] = useState(false);
@@ -71,24 +72,27 @@ export default function VoiceInput({ language, phoneNumber, onComplete }: VoiceI
 
       recognition.onresult = (event: any) => {
         let interimTranscript = '';
+        let newFinalTranscript = '';
         
-        // Rebuild the entire transcript from scratch each time
-        finalTranscript = '';
-        
+        // Process all results
         for (let i = 0; i < event.results.length; i++) {
           const transcript = event.results[i][0].transcript;
           
           if (event.results[i].isFinal) {
-            finalTranscript += transcript + ' ';
+            newFinalTranscript += transcript + ' ';
           } else {
             interimTranscript += transcript;
           }
         }
         
+        // Update finalTranscript only with new final results
+        finalTranscript = newFinalTranscript;
+        
         console.log('Current transcript:', finalTranscript + interimTranscript);
         
-        // Show the complete transcript (final + interim)
-        setTranscription((finalTranscript + interimTranscript).trim());
+        // Show only the current speaking phrase (interim), not the accumulated text
+        // This prevents the repetition issue on mobile
+        setTranscription(interimTranscript || finalTranscript.trim());
       };
 
       recognition.onerror = (event: any) => {
@@ -118,6 +122,8 @@ export default function VoiceInput({ language, phoneNumber, onComplete }: VoiceI
         if (finalTranscript.trim()) {
           console.log('Processing final transcript:', finalTranscript);
           await processTranscription(finalTranscript.trim());
+          // Clear transcription after processing
+          setTranscription('');
         } else {
           alert('No speech detected. Please click the microphone and speak clearly.');
         }
