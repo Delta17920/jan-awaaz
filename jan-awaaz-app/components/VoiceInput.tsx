@@ -322,6 +322,13 @@ export default function VoiceInput({ language, phoneNumber, onComplete }: VoiceI
             <p className="text-lg">{transcription}</p>
           </div>
         )}
+
+        {/* Patience Message */}
+        <div className="w-full mt-4 p-3 bg-yellow-50 border border-yellow-200 rounded-lg">
+          <p className="text-sm text-yellow-800 text-center">
+            {getTranslation('patienceMessage', language)}
+          </p>
+        </div>
       </div>
     </div>
   );
