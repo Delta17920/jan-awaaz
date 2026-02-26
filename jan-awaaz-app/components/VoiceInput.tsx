@@ -63,7 +63,6 @@ export default function VoiceInput({ language, phoneNumber, onComplete }: VoiceI
       console.log('Starting speech recognition with language:', recognition.lang);
 
       let finalTranscript = '';
-      let interimTranscript = '';
 
       recognition.onstart = () => {
         console.log('Speech recognition started - speak now!');
@@ -71,22 +70,25 @@ export default function VoiceInput({ language, phoneNumber, onComplete }: VoiceI
       };
 
       recognition.onresult = (event: any) => {
-        interimTranscript = '';
+        let interimTranscript = '';
         
-        for (let i = event.resultIndex; i < event.results.length; i++) {
+        // Rebuild the entire transcript from scratch each time
+        finalTranscript = '';
+        
+        for (let i = 0; i < event.results.length; i++) {
           const transcript = event.results[i][0].transcript;
           
           if (event.results[i].isFinal) {
             finalTranscript += transcript + ' ';
-            console.log('Final transcript:', finalTranscript);
           } else {
             interimTranscript += transcript;
-            console.log('Interim transcript:', interimTranscript);
           }
         }
         
-        // Show interim results
-        setTranscription(finalTranscript + interimTranscript);
+        console.log('Current transcript:', finalTranscript + interimTranscript);
+        
+        // Show the complete transcript (final + interim)
+        setTranscription((finalTranscript + interimTranscript).trim());
       };
 
       recognition.onerror = (event: any) => {
@@ -281,18 +283,18 @@ export default function VoiceInput({ language, phoneNumber, onComplete }: VoiceI
               setTranscription(input);
               processTranscription(input);
             }
-          }} className="flex gap-2">
+          }} className="flex flex-col sm:flex-row gap-2">
             <input
               type="text"
               name="userInput"
               placeholder="e.g., My husband died, I need financial support"
-              className="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
               disabled={isProcessing}
             />
             <button
               type="submit"
               disabled={isProcessing}
-              className="px-6 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 disabled:bg-gray-400"
+              className="px-6 py-3 bg-green-500 text-white rounded-lg hover:bg-green-600 disabled:bg-gray-400 whitespace-nowrap font-medium"
             >
               Submit
             </button>

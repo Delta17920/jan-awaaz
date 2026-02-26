@@ -113,16 +113,19 @@ Step 3: If user says they have documents, ask: "क्या आप अभी �
 Step 4: ONLY when user explicitly confirms they want to SHOW documents NOW, include [READY_FOR_DOCUMENTS]
 
 DOCUMENT CAPTURE TRIGGER - ONLY use [READY_FOR_DOCUMENTS] when user EXPLICITLY says they want to SHOW documents:
-- "show" / "दिखाना" / "दिखाऊं" / "दिखाता हूं"
+- "show" / "दिखाना" / "दिखाऊं" / "दिखाता हूं" / "दिखाएं"
 - "I want to show" / "मैं दिखाना चाहता हूं"
 - "let me show" / "मैं दिखाता हूं"
 - "I can show" / "मैं दिखा सकता हूं"
 - "ready to show" / "दिखाने के लिए तैयार"
 
 DO NOT trigger [READY_FOR_DOCUMENTS] if user only says:
-- "yes" / "हां" (just confirming they have documents)
+- "yes" / "हां" / "हाँ" (just confirming they have documents)
 - "I have them" / "मेरे पास हैं" (just saying they possess them)
 - "ready" / "तैयार" (without explicitly saying "show")
+- "okay" / "ठीक है" / "अच्छा" (just acknowledging)
+
+NEVER include [READY_FOR_DOCUMENTS] unless the user's message contains words like "show", "दिखाना", "दिखाऊं", "दिखाएं" or similar explicit intent to display documents.
 
 RESPONSE FORMAT when user confirms they want to SHOW:
 "बहुत अच्छा! कृपया अपने दस्तावेज कैमरे में दिखाएं। [READY_FOR_DOCUMENTS]"
@@ -153,7 +156,7 @@ Current conversation language: ${getLanguageName(language as string)}`;
       const topScheme = schemes[0];
       const requiredDocs = topScheme.requiredDocuments || [];
       const docCount = requiredDocs.length;
-      const docNames = (topScheme as any).documentNames || [];
+      const docNames: string[] = (topScheme as any).documentNames || [];
       
       systemPrompt += `\n\nMATCHED SCHEME INFORMATION:
 Scheme Name: ${topScheme.schemeName}

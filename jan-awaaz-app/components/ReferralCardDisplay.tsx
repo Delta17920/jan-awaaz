@@ -209,9 +209,29 @@ function getLocalizedText(key: string, language: Language): string {
 }
 
 export default function ReferralCardDisplay({ card, office, language }: ReferralCardDisplayProps) {
-  const downloadCard = () => {
+  const downloadCard = async () => {
     if (card.imageUrl) {
-      window.open(card.imageUrl, '_blank');
+      try {
+        // Fetch the image from S3
+        const response = await fetch(card.imageUrl);
+        const blob = await response.blob();
+        
+        // Create a download link
+        const url = window.URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = `referral-card-${card.referenceNumber}.png`;
+        document.body.appendChild(link);
+        link.click();
+        
+        // Cleanup
+        document.body.removeChild(link);
+        window.URL.revokeObjectURL(url);
+      } catch (error) {
+        console.error('Error downloading card:', error);
+        // Fallback: open in new tab if download fails
+        window.open(card.imageUrl, '_blank');
+      }
     }
   };
 
