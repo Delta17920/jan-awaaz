@@ -46,7 +46,8 @@ type TranslationKey =
   | 'skipHelperText'
   | 'cameraPermissionError'
   | 'browserRecommendation'
-  | 'patienceMessage';
+  | 'patienceMessage'
+  | 'startOver';
 
 const translations: Record<TranslationKey, Record<Language, string>> = {
   appTitle: {
@@ -552,6 +553,18 @@ const translations: Record<TranslationKey, Record<Language, string>> = {
     'gu-IN': '⏳ કૃપા કરીને ધીરજ રાખો, પ્રતિસાદ આવવામાં થોડો સમય લાગી શકે છે',
     'pa-IN': '⏳ ਕਿਰਪਾ ਕਰਕੇ ਸਬਰ ਰੱਖੋ, ਜਵਾਬ ਆਉਣ ਵਿੱਚ ਕੁਝ ਸਮਾਂ ਲੱਗ ਸਕਦਾ ਹੈ',
     'or-IN': '⏳ ଦୟାକରି ଧୈର୍ଯ୍ୟ ରଖନ୍ତୁ, ପ୍ରତିକ୍ରିୟା ଆସିବାକୁ କିଛି ସମୟ ଲାଗିପାରେ',
+  },
+  startOver: {
+    'hi-IN': '🔄 नए उपयोगकर्ता के लिए शुरू करें',
+    'ta-IN': '🔄 புதிய பயனருக்கு தொடங்கவும்',
+    'te-IN': '🔄 కొత్త వినియోగదారు కోసం ప్రారంభించండి',
+    'kn-IN': '🔄 ಹೊಸ ಬಳಕೆದಾರರಿಗಾಗಿ ಪ್ರಾರಂಭಿಸಿ',
+    'ml-IN': '🔄 പുതിയ ഉപയോക്താവിനായി ആരംഭിക്കുക',
+    'mr-IN': '🔄 नवीन वापरकर्त्यासाठी सुरू करा',
+    'bn-IN': '🔄 নতুন ব্যবহারকারীর জন্য শুরু করুন',
+    'gu-IN': '🔄 નવા વપરાશકર્તા માટે શરૂ કરો',
+    'pa-IN': '🔄 ਨਵੇਂ ਉਪਭੋਗਤਾ ਲਈ ਸ਼ੁਰੂ ਕਰੋ',
+    'or-IN': '🔄 ନୂତନ ଉପଯୋଗକର୍ତ୍ତାଙ୍କ ପାଇଁ ଆରମ୍ଭ କରନ୍ତୁ',
   },
 };
 

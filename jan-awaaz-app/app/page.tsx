@@ -190,6 +190,28 @@ export default function Home() {
     setCurrentStep('card');
   };
 
+  const handleStartOver = () => {
+    // Clear all saved data
+    localStorage.removeItem('jan-awaaz-phone');
+    localStorage.removeItem('jan-awaaz-session');
+    localStorage.removeItem('jan-awaaz-language');
+    localStorage.removeItem('jan-awaaz-document-verified');
+    
+    // Reset all state
+    setPhoneNumber(null);
+    setSessionId(null);
+    setLanguage('hi-IN');
+    setSchemeMatches([]);
+    setCscCenter(null);
+    setOffice(null);
+    setReferralCard(null);
+    setDocumentsRequired(1);
+    setDocumentsUploaded(0);
+    
+    // Go back to language selection
+    setCurrentStep('language');
+  };
+
   return (
     <main className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
       <div className="container mx-auto px-4 py-8 max-w-2xl">
@@ -209,6 +231,18 @@ export default function Home() {
               {isOnline ? getTranslation('online', language) : getTranslation('offline', language)}
             </span>
           </div>
+
+          {/* Start Over Button - Show only after language selection */}
+          {currentStep !== 'language' && (
+            <div className="mt-4">
+              <button
+                onClick={handleStartOver}
+                className="px-4 py-2 bg-gray-100 hover:bg-gray-200 text-gray-700 rounded-lg text-sm font-medium transition-colors border border-gray-300"
+              >
+                {getTranslation('startOver', language)}
+              </button>
+            </div>
+          )}
         </header>
 
         {/* Language Selection */}
