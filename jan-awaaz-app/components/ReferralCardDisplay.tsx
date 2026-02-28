@@ -256,9 +256,8 @@ export default function ReferralCardDisplay({ card, office, language }: Referral
     }
   };
 
-  const openInMaps = () => {
+  const openInMaps = async () => {
     // Extract clean address from office.address
-    // Remove labels like "Name:", "Address:", "Landmark:", "Contact Number:"
     let cleanAddress = office.address;
     
     // If address contains multiple lines with labels, extract just the address line
@@ -266,16 +265,43 @@ export default function ReferralCardDisplay({ card, office, language }: Referral
       const lines = cleanAddress.split('\n');
       const addressLine = lines.find((line: string) => line.includes('Address:') || line.includes('पता:') || line.includes('முகவரி:'));
       if (addressLine) {
-        // Remove the label and get just the address
         cleanAddress = addressLine.replace(/^(Address:|पता:|முகவரி:|చిరునామా:|വിലാസം:|ವಿಳಾಸ:|ঠিকানা:|સરનામું:|ਪਤਾ:|ଠିକଣା:)\s*/i, '').trim();
       }
     }
     
-    // Create Google Maps search URL with the clean address
-    const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(cleanAddress)}`;
-    console.log('Opening Google Maps with address:', cleanAddress);
-    console.log('Maps URL:', mapsUrl);
-    window.open(mapsUrl, '_blank');
+    // Try to geocode the address using Google Maps Geocoding API
+    try {
+      const geocodeUrl = `https://maps.googleapis.com/maps/api/geocode/json?address=${encodeURIComponent(cleanAddress)}&key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY || ''}`;
+      
+      // If API key is not available, fall back to search
+      if (!process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY) {
+        console.log('No Google Maps API key, using search fallback');
+        const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(cleanAddress)}`;
+        window.open(mapsUrl, '_blank');
+        return;
+      }
+      
+      const response = await fetch(geocodeUrl);
+      const data = await response.json();
+      
+      if (data.status === 'OK' && data.results.length > 0) {
+        const location = data.results[0].geometry.location;
+        // Open with exact coordinates
+        const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${location.lat},${location.lng}`;
+        console.log('Opening Google Maps with coordinates:', location);
+        window.open(mapsUrl, '_blank');
+      } else {
+        // Fallback to search if geocoding fails
+        console.log('Geocoding failed, using search fallback');
+        const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(cleanAddress)}`;
+        window.open(mapsUrl, '_blank');
+      }
+    } catch (error) {
+      console.error('Error geocoding address:', error);
+      // Fallback to search on error
+      const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(cleanAddress)}`;
+      window.open(mapsUrl, '_blank');
+    }
   };
 
   const getEligibilityText = (status: string) => {

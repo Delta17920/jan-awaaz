@@ -64,7 +64,7 @@ export default function LanguageSelector({ onSelect, onPreview }: LanguageSelect
 
   return (
     <div className="bg-white rounded-lg shadow-lg p-8 border-4 border-black">
-      <h2 className="text-2xl font-bold text-center mb-6 text-gray-800">
+      <h2 className="text-2xl text-red-800 font-bold text-center mb-6 text-gray-800">
         अपनी भाषा चुनें / Select Your Language
       </h2>
       <div className="grid grid-cols-2 gap-4">

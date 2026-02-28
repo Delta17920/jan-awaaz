@@ -213,22 +213,119 @@ export default function Home() {
   };
 
   return (
-    <main className="min-h-screen relative">
-      {/* Background Image with Blur */}
-      <div 
-        className="fixed inset-0 z-0"
-        style={{
-          backgroundImage: 'url(/bg.png)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-          filter: 'blur(3px)',
-          transform: 'scale(1.1)', // Prevent blur edge artifacts
-        }}
-      />
-      
-      {/* Overlay for better readability */}
-      <div className="fixed inset-0 z-0 bg-white/30" />
+    <main className="min-h-screen relative overflow-hidden bg-gradient-to-b from-blue-50 to-white">
+      {/* Floating Words Background */}
+      <div className="fixed inset-0 z-[1] overflow-hidden">
+        {/* Hindi - योजना */}
+        <div className="absolute text-6xl font-bold text-blue-500/20 animate-float-slow cursor-pointer hover:text-blue-600/40 hover:scale-110 transition-all duration-300" style={{ top: '10%', left: '5%', animationDelay: '0s' }}>
+          योजना
+        </div>
+        <div className="absolute text-5xl font-bold text-blue-400/15 animate-float-medium cursor-pointer hover:text-blue-500/35 hover:scale-110 transition-all duration-300" style={{ top: '45%', left: '8%', animationDelay: '4s' }}>
+          योजना
+        </div>
+        <div className="absolute text-4xl font-bold text-blue-300/15 animate-float-slow cursor-pointer hover:text-blue-400/35 hover:scale-110 transition-all duration-300" style={{ top: '5%', left: '2%', animationDelay: '7s' }}>
+          योजना
+        </div>
+        <div className="absolute text-5xl font-bold text-blue-500/18 animate-float-fast cursor-pointer hover:text-blue-600/38 hover:scale-110 transition-all duration-300" style={{ top: '78%', left: '3%', animationDelay: '9s' }}>
+          योजना
+        </div>
+        {/* Tamil - திட்டம் */}
+        <div className="absolute text-5xl font-bold text-green-500/20 animate-float-medium cursor-pointer hover:text-green-600/40 hover:scale-110 transition-all duration-300" style={{ top: '20%', right: '10%', animationDelay: '2s' }}>
+          திட்டம்
+        </div>
+        <div className="absolute text-6xl font-bold text-green-400/15 animate-float-slow cursor-pointer hover:text-green-500/35 hover:scale-110 transition-all duration-300" style={{ top: '55%', right: '8%', animationDelay: '5s' }}>
+          திட்டம்
+        </div>
+        <div className="absolute text-4xl font-bold text-green-300/15 animate-float-medium cursor-pointer hover:text-green-400/35 hover:scale-110 transition-all duration-300" style={{ top: '90%', left: '25%', animationDelay: '7.5s' }}>
+          திட்டம்
+        </div>
+        {/* Telugu - పథకం */}
+        <div className="absolute text-7xl font-bold text-purple-500/20 animate-float-fast cursor-pointer hover:text-purple-600/40 hover:scale-110 transition-all duration-300" style={{ top: '60%', left: '15%', animationDelay: '1s' }}>
+          పథకం
+        </div>
+        <div className="absolute text-5xl font-bold text-purple-400/15 animate-float-medium cursor-pointer hover:text-purple-500/35 hover:scale-110 transition-all duration-300" style={{ top: '25%', left: '12%', animationDelay: '3.5s' }}>
+          పథకం
+        </div>
+        <div className="absolute text-4xl font-bold text-purple-300/15 animate-float-fast cursor-pointer hover:text-purple-400/35 hover:scale-110 transition-all duration-300" style={{ top: '12%', right: '35%', animationDelay: '8s' }}>
+          పథకం
+        </div>
+        <div className="absolute text-6xl font-bold text-purple-400/18 animate-float-slow cursor-pointer hover:text-purple-500/38 hover:scale-110 transition-all duration-300" style={{ top: '35%', left: '1%', animationDelay: '10s' }}>
+          పథకం
+        </div>
+        {/* Kannada - ಯೋಜನೆ */}
+        <div className="absolute text-5xl font-bold text-orange-500/20 animate-float-slow cursor-pointer hover:text-orange-600/40 hover:scale-110 transition-all duration-300" style={{ top: '70%', right: '20%', animationDelay: '3s' }}>
+          ಯೋಜನೆ
+        </div>
+        <div className="absolute text-6xl font-bold text-orange-400/15 animate-float-fast cursor-pointer hover:text-orange-500/35 hover:scale-110 transition-all duration-300" style={{ top: '35%', right: '25%', animationDelay: '6s' }}>
+          ಯೋಜನೆ
+        </div>
+        <div className="absolute text-4xl font-bold text-orange-300/15 animate-float-slow cursor-pointer hover:text-orange-400/35 hover:scale-110 transition-all duration-300" style={{ top: '88%', right: '40%', animationDelay: '8.5s' }}>
+          ಯೋಜನೆ
+        </div>
+        <div className="absolute text-5xl font-bold text-orange-500/18 animate-float-medium cursor-pointer hover:text-orange-600/38 hover:scale-110 transition-all duration-300" style={{ top: '52%', left: '6%', animationDelay: '11s' }}>
+          ಯೋಜನೆ
+        </div>
+        {/* Malayalam - പദ്ധതി */}
+        <div className="absolute text-6xl font-bold text-pink-500/20 animate-float-medium cursor-pointer hover:text-pink-600/40 hover:scale-110 transition-all duration-300" style={{ top: '40%', right: '5%', animationDelay: '1.5s' }}>
+          പദ്ധതി
+        </div>
+        <div className="absolute text-5xl font-bold text-pink-400/15 animate-float-slow cursor-pointer hover:text-pink-500/35 hover:scale-110 transition-all duration-300" style={{ top: '75%', right: '12%', animationDelay: '4.5s' }}>
+          പദ്ധതി
+        </div>
+        <div className="absolute text-4xl font-bold text-pink-400/18 animate-float-fast cursor-pointer hover:text-pink-500/38 hover:scale-110 transition-all duration-300" style={{ top: '18%', left: '10%', animationDelay: '12s' }}>
+          പദ്ധതി
+        </div>
+        {/* Marathi - योजना */}
+        <div className="absolute text-5xl font-bold text-indigo-500/20 animate-float-fast cursor-pointer hover:text-indigo-600/40 hover:scale-110 transition-all duration-300" style={{ top: '30%', left: '25%', animationDelay: '2.5s' }}>
+          योजना
+        </div>
+        <div className="absolute text-6xl font-bold text-indigo-400/15 animate-float-medium cursor-pointer hover:text-indigo-500/35 hover:scale-110 transition-all duration-300" style={{ top: '65%', left: '30%', animationDelay: '5.5s' }}>
+          योजना
+        </div>
+        <div className="absolute text-4xl font-bold text-indigo-400/18 animate-float-slow cursor-pointer hover:text-indigo-500/38 hover:scale-110 transition-all duration-300" style={{ top: '92%', left: '7%', animationDelay: '13s' }}>
+          योजना
+        </div>
+        {/* Bengali - প্রকল্প */}
+        <div className="absolute text-6xl font-bold text-red-500/20 animate-float-slow cursor-pointer hover:text-red-600/40 hover:scale-110 transition-all duration-300" style={{ top: '80%', left: '40%', animationDelay: '0.5s' }}>
+          প্রকল্প
+        </div>
+        <div className="absolute text-5xl font-bold text-red-400/15 animate-float-fast cursor-pointer hover:text-red-500/35 hover:scale-110 transition-all duration-300" style={{ top: '18%', left: '45%', animationDelay: '3.8s' }}>
+          প্রকল্প
+        </div>
+        <div className="absolute text-4xl font-bold text-red-400/18 animate-float-medium cursor-pointer hover:text-red-500/38 hover:scale-110 transition-all duration-300" style={{ top: '48%', left: '4%', animationDelay: '14s' }}>
+          প্রকল্প
+        </div>
+        {/* Gujarati - યોજના */}
+        <div className="absolute text-5xl font-bold text-teal-500/20 animate-float-medium cursor-pointer hover:text-teal-600/40 hover:scale-110 transition-all duration-300" style={{ top: '15%', left: '60%', animationDelay: '3.5s' }}>
+          યોજના
+        </div>
+        <div className="absolute text-6xl font-bold text-teal-400/15 animate-float-slow cursor-pointer hover:text-teal-500/35 hover:scale-110 transition-all duration-300" style={{ top: '52%', left: '55%', animationDelay: '6.5s' }}>
+          યોજના
+        </div>
+        <div className="absolute text-4xl font-bold text-teal-400/18 animate-float-fast cursor-pointer hover:text-teal-500/38 hover:scale-110 transition-all duration-300" style={{ top: '68%', left: '9%', animationDelay: '15s' }}>
+          યોજના
+        </div>
+        {/* Punjabi - ਯੋਜਨਾ */}
+        <div className="absolute text-7xl font-bold text-yellow-500/20 animate-float-fast cursor-pointer hover:text-yellow-600/40 hover:scale-110 transition-all duration-300" style={{ top: '50%', left: '70%', animationDelay: '1.8s' }}>
+          ਯੋਜਨਾ
+        </div>
+        <div className="absolute text-5xl font-bold text-yellow-400/15 animate-float-medium cursor-pointer hover:text-yellow-500/35 hover:scale-110 transition-all duration-300" style={{ top: '22%', left: '75%', animationDelay: '4.8s' }}>
+          ਯੋਜਨਾ
+        </div>
+        <div className="absolute text-4xl font-bold text-yellow-400/18 animate-float-slow cursor-pointer hover:text-yellow-500/38 hover:scale-110 transition-all duration-300" style={{ top: '82%', left: '11%', animationDelay: '16s' }}>
+          ਯੋਜਨਾ
+        </div>
+        {/* Odia - ଯୋଜନା */}
+        <div className="absolute text-6xl font-bold text-cyan-500/20 animate-float-slow cursor-pointer hover:text-cyan-600/40 hover:scale-110 transition-all duration-300" style={{ top: '85%', right: '15%', animationDelay: '2.8s' }}>
+          ଯୋଜନା
+        </div>
+        <div className="absolute text-5xl font-bold text-cyan-400/15 animate-float-fast cursor-pointer hover:text-cyan-500/35 hover:scale-110 transition-all duration-300" style={{ top: '42%', right: '18%', animationDelay: '5.8s' }}>
+          ଯୋଜନା
+        </div>
+        <div className="absolute text-4xl font-bold text-cyan-400/18 animate-float-medium cursor-pointer hover:text-cyan-500/38 hover:scale-110 transition-all duration-300" style={{ top: '28%', left: '7%', animationDelay: '17s' }}>
+          ଯୋଜନା
+        </div>
+      </div>
       
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 py-8 max-w-2xl">
