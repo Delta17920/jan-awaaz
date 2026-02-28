@@ -316,10 +316,10 @@ export default function VoiceInput({ language, phoneNumber, onComplete }: VoiceI
         {/* Transcription */}
         {transcription && (
           <div className="w-full p-4 bg-gray-50 rounded-lg">
-            <p className="text-sm text-gray-600 mb-2">
+            <p className="text-sm text-gray-800 mb-2 font-medium">
               {getTranslation('youSaid', language)}
             </p>
-            <p className="text-lg">{transcription}</p>
+            <p className="text-lg text-black font-medium">{transcription}</p>
           </div>
         )}
 
