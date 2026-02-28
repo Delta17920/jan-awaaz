@@ -63,7 +63,7 @@ export default function LanguageSelector({ onSelect, onPreview }: LanguageSelect
   };
 
   return (
-    <div className="bg-white rounded-lg shadow-lg p-8">
+    <div className="bg-white rounded-lg shadow-lg p-8 border-4 border-black">
       <h2 className="text-2xl font-bold text-center mb-6 text-gray-800">
         अपनी भाषा चुनें / Select Your Language
       </h2>
@@ -75,8 +75,8 @@ export default function LanguageSelector({ onSelect, onPreview }: LanguageSelect
             onMouseEnter={() => handleLanguageHover(lang.code)}
             className="p-4 border-2 border-gray-200 rounded-lg hover:border-blue-500 hover:bg-blue-50 transition-all text-center"
           >
-            <div className="text-2xl font-bold mb-1">{lang.nativeName}</div>
-            <div className="text-sm text-gray-600">{lang.name}</div>
+            <div className="text-2xl font-bold mb-1 text-gray-800">{lang.nativeName}</div>
+            <div className="text-sm text-gray-700">{lang.name}</div>
           </button>
         ))}
       </div>

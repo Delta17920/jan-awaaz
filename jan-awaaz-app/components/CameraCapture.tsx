@@ -177,7 +177,7 @@ export default function CameraCapture({
   };
 
   return (
-    <div className="bg-white rounded-lg shadow-lg p-8">
+    <div className="bg-white rounded-lg shadow-lg p-8 border-4 border-black">
       <h2 className="text-2xl font-bold text-center mb-2 text-gray-800">
         {getTranslation('documentUploadTitle', language)}
       </h2>

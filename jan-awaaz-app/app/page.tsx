@@ -213,10 +213,27 @@ export default function Home() {
   };
 
   return (
-    <main className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
-      <div className="container mx-auto px-4 py-8 max-w-2xl">
+    <main className="min-h-screen relative">
+      {/* Background Image with Blur */}
+      <div 
+        className="fixed inset-0 z-0"
+        style={{
+          backgroundImage: 'url(/bg.png)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          filter: 'blur(3px)',
+          transform: 'scale(1.1)', // Prevent blur edge artifacts
+        }}
+      />
+      
+      {/* Overlay for better readability */}
+      <div className="fixed inset-0 z-0 bg-white/30" />
+      
+      {/* Content */}
+      <div className="relative z-10 container mx-auto px-4 py-8 max-w-2xl">
         {/* Header */}
-        <header className="text-center mb-8">
+        <header className="text-center mb-8 backdrop-blur-md bg-white/50 p-6 rounded-2xl border-4 border-black shadow-xl">
           <h1 className="text-4xl font-bold text-blue-600 mb-2">
             {getTranslation('appTitle', language)}
           </h1>
