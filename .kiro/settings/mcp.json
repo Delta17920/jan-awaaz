@@ -3,14 +3,15 @@
     "awslabs.aws-diagram-mcp-server": {
       "command": "wsl",
       "args": [
-        "/home/sbang/.local/bin/uvx", 
+        "/home/sbang/.local/bin/uvx",
         "awslabs.aws-diagram-mcp-server"
       ],
       "env": {
         "FASTMCP_LOG_LEVEL": "ERROR"
       },
       "autoApprove": [],
-      "disabled": false
+      "disabled": false,
+      "disabledTools": []
     }
   }
 }

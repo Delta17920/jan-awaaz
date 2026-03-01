@@ -16,7 +16,7 @@ Key architectural decisions:
 
 ### High-Level Architecture
 
-![Jan-Awaaz AWS Architecture](image/generated-diagrams/jan-awaaz-secure-architecture.png)
+![Jan-Awaaz AWS Architecture](image/generated-diagrams/architecture.png)
 
 The architecture diagram above shows the complete AWS infrastructure for Jan-Awaaz:
 
