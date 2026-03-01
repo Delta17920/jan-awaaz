@@ -2,30 +2,84 @@
 
 ## Overview
 
-Jan-Awaaz is a voice-first mobile application that bridges the gap between rural Indian citizens and government schemes through intelligent voice interaction, document verification, and smart routing. The system architecture is built on AWS services to provide scalable, low-latency voice processing, document analysis, and knowledge-based scheme matching.
+Jan-Awaaz is a voice-first Progressive Web Application (PWA) that bridges the gap between rural Indian citizens and government schemes through intelligent voice interaction, document verification, and smart CSC center routing. The system architecture is built on Next.js (deployed on Vercel) with AWS backend services to provide scalable, low-latency voice processing, document analysis, and knowledge-based scheme matching.
 
-The design follows a mobile-first, voice-centric approach where 90% of user interaction happens through speech. The system uses Amazon Transcribe for multi-language speech-to-text, Amazon Polly for natural voice responses, Amazon Textract for document verification, and Amazon Bedrock Knowledge Base for accurate scheme matching. A critical design principle is "no hallucination" - the system only returns schemes that exist in verified government PDF documents.
+**Current Implementation:** The application uses Web Speech API for voice input/output (Chrome/Edge browsers), Amazon Bedrock Knowledge Base with Claude 3 Haiku for conversational AI and scheme matching, AWS Textract for document verification, and Google Maps Geocoding API for precise CSC center locations. The frontend is a Next.js PWA with responsive design, glassmorphism effects, and multilingual support.
+
+The design follows a mobile-first, voice-centric approach where 90% of user interaction happens through speech. The system uses browser-based Web Speech API for speech-to-text and text-to-speech, Amazon Bedrock Knowledge Base for accurate scheme matching with Claude 3 Haiku, and AWS Textract for document verification. A critical design principle is "no hallucination" - the system only returns schemes that exist in verified government PDF documents.
 
 Key architectural decisions:
-- **Stateful session management** using phone numbers as identifiers (no email/password)
-- **Proactive context awareness** that remembers user state and prompts intelligently on return visits
-- **Smart routing logic** that connects document defects to physical office requirements
-- **Icon-heavy visual design** for illiterate users with minimal text dependency
+- **Browser-based voice processing** using Web Speech API (no AWS Transcribe/Polly needed)
+- **Parallel API calls** for speech response and metadata extraction (faster response times)
+- **Stateful session management** using phone numbers as identifiers in DynamoDB (no email/password)
+- **AI-powered CSC center search** using Claude 3 Haiku with location-based queries
+- **Smart document handling** with skip functionality for missing documents
+- **CORS proxy** for referral card downloads from S3
+- **Google Maps integration** with Geocoding API for precise locations
+- **Icon-heavy visual design** with glassmorphism and floating multilingual words for illiterate users
 
 ## Architecture
 
 ### High-Level Architecture
 
-![Jan-Awaaz AWS Architecture](image/generated-diagrams/architecture.png)
+**Actual Implementation Architecture:**
 
-The architecture diagram above shows the complete AWS infrastructure for Jan-Awaaz:
+```
+┌─────────────────────────────────────────────────────────────────┐
+│                         User Layer                               │
+│  Mobile Browser (Chrome/Edge) - PWA Installed                   │
+│  - Web Speech API (Voice Input/Output)                          │
+│  - Camera API (Document Capture)                                │
+│  - Local Storage (Offline Support)                              │
+└────────────────────┬────────────────────────────────────────────┘
+                     │ HTTPS
+                     ↓
+┌─────────────────────────────────────────────────────────────────┐
+│                    Vercel (Next.js PWA)                          │
+│  - API Routes (/api/chat, /api/document, /api/download-card)   │
+│  - React Components (VoiceInput, CameraCapture, ReferralCard)  │
+│  - Session Management                                            │
+└────────────┬───────────────┬──────────────┬─────────────────────┘
+             │               │              │
+             ↓               ↓              ↓
+┌────────────────┐  ┌──────────────┐  ┌──────────────────┐
+│ Amazon Bedrock │  │ AWS Textract │  │ DynamoDB         │
+│ - Claude Haiku │  │ - Doc OCR    │  │ - Sessions       │
+│ - Knowledge KB │  │              │  │ - Conversation   │
+└────────────────┘  └──────────────┘  └──────────────────┘
+                                       
+┌────────────────────────────────────────────────────────────────┐
+│                      AWS S3 Buckets                             │
+│  - Scheme PDFs (Knowledge Base source)                         │
+│  - User Documents (uploaded images)                            │
+│  - Referral Cards (generated SVGs)                             │
+└────────────────────────────────────────────────────────────────┘
 
-- **User Layer**: Rural citizens interact via mobile devices with voice and camera inputs
-- **API Gateway**: Central entry point for all client requests
-- **AI Services**: Amazon Transcribe (speech-to-text), Polly (text-to-speech), Bedrock (scheme matching), and Textract (document OCR)
-- **Application Logic**: Lambda functions handling voice processing, document verification, scheme matching, location routing, and card generation
-- **Data Layer**: DynamoDB for session management, S3 buckets for scheme PDFs, user documents, and referral cards
-- **Location Service**: AWS Location Service for finding nearest government offices
+┌────────────────────────────────────────────────────────────────┐
+│                   Google Maps API                               │
+│  - Geocoding API (Address → Coordinates)                       │
+│  - Maps Display (Directions)                                   │
+└────────────────────────────────────────────────────────────────┘
+```
+
+**Technology Stack:**
+- **Frontend:** Next.js 14, React, TypeScript, Tailwind CSS
+- **Deployment:** Vercel (serverless, automatic HTTPS)
+- **Voice:** Web Speech API (browser-based, Chrome/Edge only)
+- **AI/ML:** Amazon Bedrock (Claude 3 Haiku, Titan Embeddings v2)
+- **Document Processing:** AWS Textract
+- **Storage:** AWS S3 (3 buckets), DynamoDB (sessions table)
+- **Location:** Google Maps Geocoding API
+- **Region:** AWS ap-south-1 (Mumbai)
+
+**Key Differences from Original Design:**
+1. No AWS Transcribe/Polly - using Web Speech API instead (browser-based)
+2. No AWS Location Service - using Claude Haiku for CSC search + Google Maps
+3. No Lambda functions - using Next.js API routes on Vercel
+4. No API Gateway - Vercel handles routing
+5. Parallel API calls for speech + metadata extraction (faster response)
+6. CORS proxy for S3 downloads
+7. PWA with offline support via service worker
 
 ```mermaid
 %%{init: {'theme':'base', 'themeVariables': { 'primaryColor':'#e8f4f8','primaryTextColor':'#000','primaryBorderColor':'#2c5aa0','lineColor':'#2c5aa0','secondaryColor':'#fff4e6','tertiaryColor':'#f0f0f0','background':'#ffffff','mainBkg':'#e8f4f8','secondBkg':'#fff4e6','tertiaryBkg':'#f0f0f0','textColor':'#000','nodeBorder':'#2c5aa0','clusterBkg':'#f5f5f5','clusterBorder':'#666','edgeLabelBackground':'#ffffff'}, 'flowchart': {'defaultRenderer': 'elk'}}}%%
@@ -219,48 +273,56 @@ flowchart TD
 
 ### 1. Voice Processing Service
 
+**Actual Implementation:** Web Speech API (browser-based)
+
 **Responsibilities:**
-- Capture and stream audio from mobile microphone
-- Route audio to Amazon Transcribe with language parameter
-- Receive transcribed text and forward to downstream services
-- Generate voice responses using Amazon Polly
-- Handle audio compression for low bandwidth
+- Capture audio from mobile microphone using Web Speech API
+- Convert speech to text in real-time (browser-based recognition)
+- Generate voice responses using Web Speech API text-to-speech
+- Handle continuous recording without interim results (prevents repetition on mobile)
+- Stop recording before speaking to prevent echo/feedback loop
+- Provide text input fallback for unsupported browsers
 
 **Interfaces:**
 
 ```typescript
-interface VoiceProcessingService {
-  // Capture voice input and return transcribed text
-  transcribeVoice(audioStream: AudioStream, language: Language): Promise<TranscribedText>
+interface VoiceInputComponent {
+  // Start recording using Web Speech API
+  startRecording(): Promise<void>
   
-  // Generate voice output from text
-  synthesizeSpeech(text: string, language: Language): Promise<AudioStream>
+  // Stop recording and process final transcript
+  stopRecording(): void
   
-  // Handle segmented audio for long inputs
-  transcribeSegmented(audioStream: AudioStream, language: Language): Promise<TranscribedText[]>
+  // Process transcription and send to chat API
+  processTranscription(transcript: string): Promise<void>
+  
+  // Speak text using Web Speech API
+  speakText(text: string): void
 }
 
-interface AudioStream {
-  data: Buffer
-  format: 'wav' | 'mp3' | 'ogg'
-  sampleRate: number
+interface WebSpeechConfig {
+  lang: string // e.g., 'hi-IN', 'ta-IN'
+  continuous: boolean // true for continuous listening
+  interimResults: boolean // false to prevent repetition
+  maxAlternatives: number // 1 for single best result
 }
 
-interface TranscribedText {
-  text: string
-  confidence: number
-  language: Language
-  timestamp: Date
+interface SpeechSynthesisConfig {
+  lang: string // e.g., 'hi-IN'
+  rate: number // 0.85 for slower, clearer speech
+  pitch: number // 1 for normal pitch
+  volume: number // 1 for full volume
+  voice: SpeechSynthesisVoice | null // Hindi voice if available
 }
-
-type Language = 'hi-IN' | 'ta-IN' | 'te-IN' | 'kn-IN' | 'ml-IN' | 'mr-IN' | 'bn-IN' | 'gu-IN' | 'pa-IN' | 'or-IN'
 ```
 
 **Key Design Decisions:**
-- Use streaming transcription for real-time feedback (<5 second latency)
-- Implement automatic language detection fallback if user's device language not set
-- Compress audio using Opus codec for bandwidth optimization
-- Cache Polly responses for common phrases to reduce latency
+- Use Web Speech API instead of AWS Transcribe/Polly (no API costs, works offline)
+- Disable interim results to prevent text repetition on mobile devices
+- Stop recording before speaking to prevent microphone from picking up speaker output
+- Provide manual text input as fallback for unsupported browsers (Firefox, Safari)
+- Language-specific voice selection (prefers Hindi voice for hi-IN)
+- Continuous recording mode for natural conversation flow
 
 ### 2. Document Verification Service
 
@@ -343,19 +405,23 @@ interface ExtractedData {
 
 ### 3. Scheme Matching Service
 
+**Actual Implementation:** Amazon Bedrock Knowledge Base with Claude 3 Haiku + Parallel API Calls
+
 **Responsibilities:**
 - Receive user's transcribed story/situation
-- Query Amazon Bedrock Knowledge Base with semantic search
+- Query Amazon Bedrock Knowledge Base with semantic search using Claude 3 Haiku
+- Execute parallel API calls: one for speech response (user's language), one for metadata extraction (English)
+- Extract scheme name, document count (number), and document names (comma-separated list)
 - Rank matching schemes by relevance
-- Extract eligibility criteria, required documents, and application process
 - Ensure no hallucinated schemes (strict source verification)
+- Take only first 3 documents as mandatory from scheme requirements
 
 **Interfaces:**
 
 ```typescript
 interface SchemeMatchingService {
-  // Find schemes matching user's situation
-  findMatchingSchemes(userStory: string, userContext: UserContext): Promise<SchemeMatch[]>
+  // Find schemes with parallel speech + metadata extraction
+  findMatchingSchemes(userStory: string, language: Language): Promise<SchemeMatch[]>
   
   // Get detailed scheme information
   getSchemeDetails(schemeId: string): Promise<SchemeDetails>
@@ -364,54 +430,68 @@ interface SchemeMatchingService {
   validateScheme(schemeName: string): Promise<boolean>
 }
 
-interface UserContext {
-  phoneNumber: string
-  language: Language
-  location: GPSCoordinates
-  previousSchemes: string[]
-}
-
 interface SchemeMatch {
   schemeId: string
-  schemeName: string
+  schemeName: string // Extracted from metadata API call
   relevanceScore: number
   eligibilityCriteria: string[]
-  requiredDocuments: DocumentType[]
+  requiredDocuments: DocumentType[] // Only first 3 as mandatory
+  documentNames: string[] // Comma-separated list from metadata
   applicationProcess: ApplicationProcess
   sourceDocument: string
+  speechText?: string // Conversational response from Haiku
 }
 
-interface ApplicationProcess {
-  type: 'ONLINE' | 'PHYSICAL' | 'HYBRID'
-  steps: string[]
-  estimatedTime: string
-  fees: number
+interface ParallelAPICall {
+  // Speech response in user's language
+  speechCommand: RetrieveAndGenerateCommand
+  
+  // Metadata extraction in English
+  metadataCommand: RetrieveAndGenerateCommand
 }
 
-interface SchemeDetails {
-  schemeId: string
-  schemeName: string
-  description: string
-  eligibility: string[]
-  benefits: string[]
-  documents: DocumentType[]
-  applicationProcess: ApplicationProcess
-  contactInfo: ContactInfo
+interface MetadataExtraction {
+  schemeName: string // SCHEME_NAME: [exact full scheme name]
+  documentCount: number // DOCUMENT_COUNT: [number only]
+  documentNames: string[] // DOCUMENT_NAMES: [comma-separated list]
 }
 ```
 
+**Parallel API Call Implementation:**
+
+```typescript
+// Execute both calls simultaneously using Promise.all()
+const [speechResponse, metadataResponse] = await Promise.all([
+  bedrockClient.send(speechCommand),
+  bedrockClient.send(metadataCommand),
+]);
+
+// Speech response comes first (user sees response immediately)
+const responseText = speechResponse.output?.text || '';
+
+// Metadata extracted in background
+const metadataText = metadataResponse.output?.text || '';
+const nameMatch = metadataText.match(/SCHEME_NAME:\s*(.+?)(?:\n|$)/i);
+const countMatch = metadataText.match(/DOCUMENT_COUNT:\s*(\d+)/i);
+const namesMatch = metadataText.match(/DOCUMENT_NAMES:\s*(.+?)(?:\n|$)/i);
+```
+
 **Knowledge Base Configuration:**
-- Use Amazon Bedrock with Titan Embeddings for semantic search
+- Use Amazon Bedrock with Claude 3 Haiku for conversational responses
+- Use Titan Embeddings v2 for semantic search
 - Index government scheme PDFs with metadata (state, category, last updated)
 - Implement retrieval with source attribution to prevent hallucination
 - Set confidence threshold at 0.7 for scheme matches
-- Return top 3 matches ranked by relevance score
+- Return top match (not top 3) for simpler user experience
 
 **Key Design Decisions:**
-- Use RAG (Retrieval Augmented Generation) pattern with strict source citation
-- Implement query expansion to handle colloquial descriptions ("my husband died" → "widow pension")
+- Parallel API calls for faster response (speech + metadata simultaneously)
+- Metadata in English for reliable parsing (scheme name, doc count, doc names)
+- Speech response in user's language for natural conversation
+- Take only first 3 documents as mandatory (reduces burden on users)
+- Document names extracted as comma-separated list for Haiku to use
+- Query expansion to handle colloquial descriptions ("husband died" → "widow pension")
 - Cache frequent queries to reduce Bedrock API calls
-- Maintain separate knowledge bases per state for state-specific schemes
 
 ### 4. Session Management Service
 
@@ -489,111 +569,143 @@ Sort Key: lastAccessedAt (Number)
 - Store session state as JSON document for flexibility
 - Use DynamoDB Streams to trigger proactive notifications (future enhancement)
 
-### 5. Location Routing Service
+### 5. CSC Center Location Service
+
+**Actual Implementation:** AI-powered search using Claude 3 Haiku + Google Maps Geocoding API
 
 **Responsibilities:**
-- Determine correct office type based on scheme and document status
-- Override destination to Panchayat office if document defects require physical correction
-- Find nearest offices using GPS coordinates
-- Display color-coded pins (Green for CSC, Red for Panchayat)
-- Calculate distance and provide directions
+- Receive user's city/area name from conversation
+- Use Claude 3 Haiku to search for CSC centers in that location
+- Extract CSC center name, address, landmark, and contact number
+- Translate CSC information to user's selected language
+- Provide Google Maps integration with Geocoding API for precise coordinates
+- Fall back to address search if geocoding fails
 
 **Interfaces:**
 
 ```typescript
-interface LocationRoutingService {
-  // Determine correct office type
-  determineOfficeType(scheme: SchemeMatch, verificationResult: VerificationResult): Promise<OfficeType>
+interface CSCLocationService {
+  // Search for CSC center using AI
+  searchCSCCenter(location: string, language: Language): Promise<CSCCenter>
   
-  // Find nearest offices
-  findNearestOffices(location: GPSCoordinates, officeType: OfficeType, radiusKm: number): Promise<Office[]>
+  // Translate CSC info to user's language
+  translateCSCInfo(cscInfo: string, language: Language): Promise<string>
   
-  // Get directions
-  getDirections(from: GPSCoordinates, to: Office): Promise<Directions>
+  // Get coordinates using Google Maps Geocoding API
+  geocodeAddress(address: string): Promise<Coordinates | null>
 }
 
-type OfficeType = 'CSC' | 'PANCHAYAT' | 'DISTRICT_OFFICE' | 'TALUK_OFFICE'
-
-interface Office {
-  officeId: string
+interface CSCCenter {
   name: string
-  type: OfficeType
-  location: GPSCoordinates
-  address: string
-  contactNumber: string
-  workingHours: string
-  distanceKm: number
+  address: string // Formatted with Name, Address, Landmark, Contact
+  phone: string
+  source: 'AI Search'
 }
 
-interface GPSCoordinates {
+interface Coordinates {
   latitude: number
   longitude: number
 }
 
-interface Directions {
-  distanceKm: number
-  estimatedTimeMinutes: number
-  steps: string[]
-  mapUrl: string
+interface GoogleMapsIntegration {
+  // Open Google Maps with coordinates
+  openWithCoordinates(lat: number, lng: number): void
+  
+  // Open Google Maps with address search (fallback)
+  openWithAddress(address: string): void
 }
 ```
 
-**Smart Routing Logic:**
+**AI Search Implementation:**
 
 ```typescript
-function determineOfficeType(
-  scheme: SchemeMatch, 
-  verificationResult: VerificationResult
-): OfficeType {
-  // Priority 1: Document defects requiring physical correction
-  if (verificationResult.requiresPhysicalVisit) {
-    const physicalDefects = ['MISSING_SEAL', 'MISSING_SIGNATURE', 'TAMPERED']
-    const hasPhysicalDefect = verificationResult.defects.some(
-      d => physicalDefects.includes(d.type)
-    )
-    if (hasPhysicalDefect) {
-      return 'PANCHAYAT' // Force physical visit
-    }
-  }
-  
-  // Priority 2: Scheme application process type
-  if (scheme.applicationProcess.type === 'ONLINE') {
-    return 'CSC'
-  } else if (scheme.applicationProcess.type === 'PHYSICAL') {
-    return 'PANCHAYAT'
-  } else {
-    // HYBRID - prefer CSC if documents are valid
-    return verificationResult.isValid ? 'CSC' : 'PANCHAYAT'
-  }
+// Search for CSC center using Claude Haiku
+const searchQuery = `Find a CSC center (Common Service Centre) near ${userLocation} India. 
+Provide ONLY the following details in this exact format:
+
+Name: [CSC center name]
+Address: [Complete street address]
+Landmark: [Nearby landmark]
+Contact Number: [Phone number]`;
+
+// Use Bedrock to search
+const searchResponse = await bedrockClient.send(searchCommand);
+const searchResult = searchResponse.output?.message?.content?.[0]?.text || '';
+
+// Extract clean address (remove disclaimers)
+const cleanedResult = extractCleanAddress(searchResult);
+
+// Translate to user's language
+const translatedAddress = await translateToLanguage(cleanedResult, language);
+
+// Save to session
+await updateSession(sessionId, phoneNumber, {
+  cscCenterInfo: {
+    name: 'CSC Center',
+    address: translatedAddress,
+    phone: extractedPhone,
+  },
+});
+```
+
+**Google Maps Integration:**
+
+```typescript
+// Extract clean address for Google Maps
+const cleanAddress = address
+  .replace(/Name:.*?\n/i, '')
+  .replace(/Address:/i, '')
+  .replace(/Landmark:.*?\n/i, '')
+  .replace(/Contact Number:.*?\n/i, '')
+  .trim();
+
+// Try geocoding first
+const response = await fetch(
+  `https://maps.googleapis.com/maps/api/geocode/json?address=${encodeURIComponent(cleanAddress)}&key=${apiKey}`
+);
+
+if (data.results?.[0]?.geometry?.location) {
+  const { lat, lng } = data.results[0].geometry.location;
+  window.open(`https://www.google.com/maps?q=${lat},${lng}`, '_blank');
+} else {
+  // Fallback to address search
+  window.open(`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(cleanAddress)}`, '_blank');
 }
 ```
 
 **Key Design Decisions:**
-- Use Amazon Location Service with Esri or HERE data providers for high-accuracy Indian government office locations
-- Maintain office database in DynamoDB with geospatial indexing
-- Implement 10km radius search with fallback to 25km if no results
-- Cache office locations for 24 hours to reduce API calls
-- Use Place Index for searching offices by type and location
-- Use Route Calculator for distance and directions
+- Use Claude Haiku for CSC search instead of AWS Location Service (more flexible, works with incomplete data)
+- Extract clean address by removing English labels (Name:, Address:, etc.)
+- Translate CSC information to user's language for display on referral card
+- Use Google Maps Geocoding API for precise coordinates (better than address search)
+- Fallback to address search mode if API key not provided or geocoding fails
+- "Open in Maps" button with 📍 emoji, translated in all 10 languages
+- Store CSC info in session for referral card generation
 
 ### 6. Referral Card Generator
+
+**Actual Implementation:** SVG generation with S3 storage + CORS proxy for downloads
 
 **Responsibilities:**
 - Generate visual referral card (Parchee) with scheme details
 - Use heavy iconography for illiterate users
-- Include QR code for CSC operator scanning
-- Allow saving to phone gallery
-- Display validation status with color-coded icons
+- Include CSC center information with translated address
+- Allow downloading as SVG via CORS proxy
+- Display Google Maps button with geocoding integration
+- Show share button for mobile sharing
 
 **Interfaces:**
 
 ```typescript
 interface ReferralCardGenerator {
   // Generate referral card
-  generateCard(session: Session, scheme: SchemeMatch, office: Office): Promise<ReferralCard>
+  generateCard(session: Session, scheme: SchemeMatch, cscCenter: CSCCenter): Promise<ReferralCard>
   
-  // Save card to gallery
-  saveToGallery(card: ReferralCard): Promise<boolean>
+  // Download card via CORS proxy
+  downloadCard(cardUrl: string, referenceNumber: string): Promise<void>
+  
+  // Share card via mobile share API
+  shareCard(card: ReferralCard): Promise<void>
 }
 
 interface ReferralCard {
@@ -604,14 +716,13 @@ interface ReferralCard {
   schemeName: string
   eligibilityStatus: 'ELIGIBLE' | 'PENDING_DOCS' | 'NEEDS_CORRECTION'
   requiredDocuments: DocumentStatus[]
-  officeDetails: Office
-  qrCode: string
-  imageUrl: string
+  cscCenter: CSCCenter
+  imageUrl: string // S3 URL
 }
 
 interface DocumentStatus {
   documentType: DocumentType
-  status: 'VALID' | 'INVALID' | 'MISSING' | 'EXPIRED'
+  status: 'VALID' | 'INVALID' | 'MISSING' | 'SKIPPED'
   icon: IconType
   message: string
 }
@@ -619,19 +730,148 @@ interface DocumentStatus {
 type IconType = 'GREEN_CHECK' | 'RED_CROSS' | 'YELLOW_WARNING' | 'BLUE_INFO'
 ```
 
+**CORS Proxy Implementation:**
+
+```typescript
+// API route: /api/download-card
+export async function GET(request: NextRequest) {
+  const { searchParams } = new URL(request.url);
+  const cardUrl = searchParams.get('url');
+  
+  // Fetch from S3 on server side (no CORS restrictions)
+  const response = await fetch(cardUrl);
+  const imageBuffer = await response.arrayBuffer();
+  
+  // Return with download headers
+  return new NextResponse(imageBuffer, {
+    headers: {
+      'Content-Type': 'image/svg+xml',
+      'Content-Disposition': `attachment; filename="referral-card-${referenceNumber}.svg"`,
+    },
+  });
+}
+
+// Frontend calls proxy instead of S3 directly
+const downloadUrl = `/api/download-card?url=${encodeURIComponent(card.imageUrl)}`;
+window.open(downloadUrl, '_blank');
+```
+
 **Visual Design Principles:**
 - Large icons (minimum 48x48px) for each document status
 - Color coding: Green (valid), Red (invalid), Yellow (warning), Blue (info)
-- Minimal text, maximum 10 words per section
+- Black border (4px) for clear visual separation
 - High contrast (black text on white background)
-- QR code for machine reading by CSC operators
 - Reference number in large, bold font
+- CSC center information with translated address
+- Google Maps button with 📍 emoji
+- Share button for mobile sharing
 
 **Key Design Decisions:**
-- Generate cards as PNG images using Canvas API or similar
-- Include QR code with encrypted session data for CSC operator access
+- Generate cards as SVG images using server-side rendering
 - Store generated cards in S3 with 90-day lifecycle
-- Use system fonts for maximum compatibility
+- Use CORS proxy to bypass S3 CORS restrictions for downloads
+- Downloads as `referral-card-[reference-number].svg`
+- Include Google Maps integration with geocoding for precise location
+- Translate all text to user's selected language
+- Black border added for better visibility on all backgrounds
+
+### 7. UI/UX Components
+
+**Actual Implementation:** React components with Tailwind CSS, glassmorphism, and accessibility features
+
+**Responsibilities:**
+- Provide visually clear and accessible interface for low-literacy users
+- Display multilingual content with appropriate fonts and colors
+- Implement responsive design for mobile and desktop
+- Add visual effects (glassmorphism, floating words) for better aesthetics
+- Ensure all interactive elements are touch-friendly
+
+**Components:**
+
+```typescript
+interface UIComponents {
+  LanguageSelector: React.FC<{ onSelect: (lang: Language) => void }>
+  PhoneInput: React.FC<{ onSubmit: (phone: string) => void }>
+  VoiceInput: React.FC<{ language: Language; phoneNumber: string }>
+  CameraCapture: React.FC<{ language: Language; phoneNumber: string }>
+  ReferralCardDisplay: React.FC<{ card: ReferralCard; language: Language }>
+}
+
+interface VisualDesign {
+  borders: 'border-4 border-black' // All main content boxes
+  glassmorphism: 'backdrop-blur-md bg-white/50' // Header effect
+  textColors: {
+    primary: 'text-gray-800' // Native language names
+    secondary: 'text-gray-700' // English names
+    transcription: 'text-black font-medium' // User input
+  }
+  background: 'bg-gradient-to-b from-blue-50 to-white' // Clean gradient
+  floatingWords: {
+    count: 33 // "Scheme" in 10 languages
+    opacity: 'opacity-15 to opacity-20'
+    animations: ['float-slow', 'float-medium', 'float-fast']
+    interactive: 'hover:scale-110 hover:text-blue-600 cursor-pointer'
+  }
+}
+```
+
+**Glassmorphism Effect:**
+
+```tsx
+// Header with frosted glass effect
+<div className="backdrop-blur-md bg-white/50 border-4 border-black rounded-lg shadow-lg p-6">
+  <h1 className="text-4xl font-bold text-center">जन आवाज़</h1>
+  <p className="text-center text-gray-600">Jan Awaaz</p>
+</div>
+```
+
+**Floating Multilingual Words:**
+
+```tsx
+// 33 floating "scheme" words in 10 languages
+<div className="fixed inset-0 pointer-events-none overflow-hidden">
+  {floatingWords.map((word, index) => (
+    <div
+      key={index}
+      className={`absolute text-${word.color}-${word.shade} text-${word.size} 
+                  opacity-${word.opacity} ${word.animation} 
+                  hover:scale-110 hover:opacity-100 transition-all duration-300 
+                  cursor-pointer pointer-events-auto`}
+      style={{ left: `${word.left}%`, top: `${word.top}%` }}
+    >
+      {word.text}
+    </div>
+  ))}
+</div>
+
+// CSS animations
+@keyframes float-slow { /* 15s duration */ }
+@keyframes float-medium { /* 12s duration */ }
+@keyframes float-fast { /* 10s duration */ }
+```
+
+**Responsive Layout:**
+
+```tsx
+// Mobile-first design with responsive stacking
+<form className="flex flex-col sm:flex-row gap-2">
+  <input className="flex-1 px-4 py-3 border rounded-lg" />
+  <button className="px-6 py-3 bg-green-500 text-white rounded-lg whitespace-nowrap">
+    Submit
+  </button>
+</form>
+```
+
+**Key Design Decisions:**
+- Black borders (4px) on all main UI boxes for clear visual separation
+- Glassmorphism effect on header for modern, accessible design
+- Floating multilingual words with low opacity (15-20%) to not interfere with content
+- Interactive hover effects on floating words (scale, color change, pointer cursor)
+- Clean gradient background (blue-50 to white) replacing static image
+- Transcription text in black (text-black font-medium) for better visibility
+- Responsive layout with flex-col sm:flex-row for mobile/desktop
+- Logo.png used for favicon, apple-icon, and manifest icons
+- All text translated to user's selected language with appropriate fonts
 
 ## Security Architecture
 
