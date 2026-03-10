@@ -6,6 +6,7 @@ import CameraCapture from '@/components/CameraCapture';
 import MapDisplay from '@/components/MapDisplay';
 import ReferralCardDisplay from '@/components/ReferralCardDisplay';
 import LanguageSelector from '@/components/LanguageSelector';
+import WelcomeLanding from '@/components/WelcomeLanding';
 import PhoneInput from '@/components/PhoneInput';
 import InstallPrompt from '@/components/InstallPrompt';
 import { Language } from '@/lib/types';
@@ -17,7 +18,7 @@ export default function Home() {
   const [language, setLanguage] = useState<Language>('hi-IN');
   const [phoneNumber, setPhoneNumber] = useState<string | null>(null);
   const [sessionId, setSessionId] = useState<string | null>(null);
-  const [currentStep, setCurrentStep] = useState<'phone' | 'language' | 'voice' | 'document' | 'card'>('language');
+  const [currentStep, setCurrentStep] = useState<'language' | 'welcome' | 'phone' | 'voice' | 'document' | 'card'>('language');
   const [schemeMatches, setSchemeMatches] = useState<any[]>([]);
   const [cscCenter, setCscCenter] = useState<any>(null);
   const [office, setOffice] = useState<any>(null);
@@ -67,6 +68,11 @@ export default function Home() {
     // Save language preference
     localStorage.setItem('jan-awaaz-language', lang);
     
+    // Move to welcome landing page
+    setCurrentStep('welcome');
+  };
+
+  const handleWelcomeContinue = () => {
     // Move to phone number input
     setCurrentStep('phone');
   };
@@ -367,6 +373,14 @@ export default function Home() {
           />
         )}
 
+        {/* Welcome Landing */}
+        {currentStep === 'welcome' && (
+          <WelcomeLanding 
+            language={language}
+            onContinue={handleWelcomeContinue}
+          />
+        )}
+
         {/* Phone Number Input */}
         {currentStep === 'phone' && (
           <PhoneInput 
@@ -407,7 +421,7 @@ export default function Home() {
 
         {/* Footer */}
         <footer className="text-center mt-12 text-sm text-gray-500">
-          <p>Powered by AI4Bharat</p>
+          <p>© 2024 Jan-Awaaz</p>
         </footer>
       </div>
 

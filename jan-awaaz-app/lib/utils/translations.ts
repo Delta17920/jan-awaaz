@@ -47,7 +47,8 @@ type TranslationKey =
   | 'cameraPermissionError'
   | 'browserRecommendation'
   | 'patienceMessage'
-  | 'startOver';
+  | 'startOver'
+  | 'letsGo';
 
 const translations: Record<TranslationKey, Record<Language, string>> = {
   appTitle: {
@@ -565,6 +566,18 @@ const translations: Record<TranslationKey, Record<Language, string>> = {
     'gu-IN': '🔄 નવા વપરાશકર્તા માટે શરૂ કરો',
     'pa-IN': '🔄 ਨਵੇਂ ਉਪਭੋਗਤਾ ਲਈ ਸ਼ੁਰੂ ਕਰੋ',
     'or-IN': '🔄 ନୂତନ ଉପଯୋଗକର୍ତ୍ତାଙ୍କ ପାଇଁ ଆରମ୍ଭ କରନ୍ତୁ',
+  },
+  letsGo: {
+    'hi-IN': 'चलिए शुरू करें',
+    'ta-IN': 'தொடங்குவோம்',
+    'te-IN': 'ప్రారంభిద్దాం',
+    'kn-IN': 'ಪ್ರಾರಂಭಿಸೋಣ',
+    'ml-IN': 'നമുക്ക് തുടങ്ങാം',
+    'mr-IN': 'चला सुरू करूया',
+    'bn-IN': 'চলুন শুরু করি',
+    'gu-IN': 'ચાલો શરૂ કરીએ',
+    'pa-IN': 'ਚਲੋ ਸ਼ੁਰੂ ਕਰੀਏ',
+    'or-IN': 'ଚାଲନ୍ତୁ ଆରମ୍ଭ କରିବା',
   },
 };
 
