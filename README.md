@@ -2,7 +2,7 @@
 
 Voice-first Progressive Web App (PWA) that helps rural Indian citizens access government schemes through intelligent voice interaction, document verification, and smart routing to CSC centers.
 
-## 🎯 Project Overview
+##  Project Overview
 
 Jan-Awaaz is a multilingual voice assistant that guides users through:
 1. **Voice Conversation**: Speak about your situation in 10 Indian languages
@@ -11,18 +11,18 @@ Jan-Awaaz is a multilingual voice assistant that guides users through:
 4. **CSC Routing**: Get directions to nearest Common Service Centre
 5. **Referral Card**: Receive digital card to show at CSC office
 
-## ✨ Key Features
+##  Key Features
 
-- 🎤 **Voice-First Interface**: Web Speech API for Chrome/Edge browsers
-- 🗣️ **10 Indian Languages**: Hindi, Tamil, Telugu, Kannada, Malayalam, Marathi, Bengali, Gujarati, Punjabi, Odia
-- 🧠 **AI-Powered Matching**: Amazon Bedrock Knowledge Base with Claude Haiku
-- 📸 **Smart Document Capture**: Camera with skip functionality for missing documents
-- 📍 **Location Services**: Google Maps integration for CSC centers
-- 🎫 **Digital Referral Cards**: QR code enabled cards for office visits
-- 📱 **PWA Support**: Install on mobile devices, works offline
-- 💬 **Conversational AI**: Natural multi-turn conversations with context
+-  **Voice-First Interface**: Web Speech API for Chrome/Edge browsers
+-  **10 Indian Languages**: Hindi, Tamil, Telugu, Kannada, Malayalam, Marathi, Bengali, Gujarati, Punjabi, Odia
+-  **AI-Powered Matching**: Amazon Bedrock Knowledge Base with Claude Haiku
+-  **Smart Document Capture**: Camera with skip functionality for missing documents
+-  **Location Services**: Google Maps integration for CSC centers
+-  **Digital Referral Cards**: QR code enabled cards for office visits
+-  **PWA Support**: Install on mobile devices, works offline
+-  **Conversational AI**: Natural multi-turn conversations with context
 
-## 🏗️ Architecture
+##  Architecture
 
 ### RAG Stack (Bedrock + Pinecone)
 
@@ -70,7 +70,7 @@ User Voice → Web Speech API → Claude Haiku (Bedrock) → Scheme Match
 - AWS Lambda (serverless functions)
 - API Gateway (REST API)
 
-## 🚀 Quick Start
+##  Quick Start
 
 ### Prerequisites
 
@@ -159,7 +159,7 @@ Open http://localhost:3000 in Chrome or Edge
 8. Receive referral card with CSC center details
 9. Click "Open in Maps" to get directions
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 jan-awaaz-app/
@@ -201,9 +201,9 @@ jan-awaaz-app/
     └── widow-pension-scheme.txt  # Sample scheme
 ```
 
-## 🎯 Current Implementation Status
+##  Current Implementation Status
 
-### ✅ Completed Features
+###  Completed Features
 
 1. **Multi-language Support**: 10 Indian languages with translations
 2. **Voice Interface**: Web Speech API for speech-to-text and text-to-speech
@@ -216,7 +216,7 @@ jan-awaaz-app/
 9. **Referral Cards**: Digital cards with QR codes
 10. **PWA Support**: Installable on mobile devices
 
-### 🔧 Technical Highlights
+###  Technical Highlights
 
 - **Dual API Calls**: Speech response + metadata extraction run in parallel
 - **Smart Parsing**: Extracts 3 mandatory documents from scheme text
@@ -225,7 +225,7 @@ jan-awaaz-app/
 - **Google Maps Integration**: Clean address extraction for accurate location
 - **Multi-language TTS**: Speaks responses in user's selected language
 
-## 💰 Cost Breakdown
+##  Cost Breakdown
 
 | Service | Monthly Cost | Notes |
 |---------|-------------|-------|
@@ -241,42 +241,33 @@ jan-awaaz-app/
 - Web Speech API instead of Transcribe/Polly (~$5-10/month saved)
 - Browser-based camera instead of Textract (~$10-20/month saved)
 
-## 🔒 Security Features
+##  Security Features
 
-- ✅ HTTPS/TLS encryption
-- ✅ S3 and DynamoDB encryption at rest
-- ✅ IAM roles with least privilege
-- ✅ Session-based authentication
-- ✅ PII protection (phone number hashing)
-- ✅ Data retention policies
+-  HTTPS/TLS encryption
+-  S3 and DynamoDB encryption at rest
+-  IAM roles with least privilege
+-  Session-based authentication
+-  PII protection (phone number hashing)
+-  Data retention policies
 
-## 🌐 Browser Support
+##  Browser Support
 
-- ✅ Chrome (recommended)
-- ✅ Edge
-- ⚠️ Firefox (no voice support)
-- ⚠️ Safari (no voice support)
+-  Chrome (recommended)
+-  Edge
+-  Firefox (no voice support)
+-  Safari (no voice support)
 
 **Note**: Voice features require Web Speech API (Chrome/Edge only). Other browsers can use text input.
 
-## 📱 PWA Features
+##  PWA Features
 
 - Install on home screen
 - Offline support for UI
 - Fast loading with service worker
 - Mobile-optimized interface
 
-## 🧪 Testing
 
-```bash
-# Run all tests
-npm test
-
-# Run specific test
-npm test -- VoiceInput.test.tsx
-```
-
-## 🚀 Deployment
+##  Deployment
 
 ### Deploy to Vercel
 
@@ -286,25 +277,15 @@ vercel
 
 Set environment variables in Vercel dashboard.
 
-## 📚 Documentation
+##  Documentation
 
 - **README.md** (this file): Project overview and setup
 - **jan-awaaz-app/README.md**: App-specific documentation
 - **.env.example**: Environment variable template
 
-## 🤝 Contributing
+##  Contributing
 
 This is a government project for rural citizens. Contributions welcome!
 
-## 📄 License
-
-MIT License
-
-## 🙏 Acknowledgments
-
-- Amazon Bedrock for conversational AI
-- Pinecone for vector database
-- Web Speech API for voice features
-- Next.js team for the framework
 
 
