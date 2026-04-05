@@ -280,7 +280,6 @@ Set environment variables in Vercel dashboard.
 ##  Documentation
 
 - **README.md** (this file): Project overview and setup
-- **jan-awaaz-app/README.md**: App-specific documentation
 - **.env.example**: Environment variable template
 
 ##  Contributing
